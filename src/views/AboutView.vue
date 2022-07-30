@@ -1,5 +1,19 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+   <div>
+        <Header :currPage="'about'" :pages="['projects', 'notes']"/>
+        <p>about this website</p>
+        <img src="logo.png" alt="hello world animation">
+        <img src="logo.png" alt="fire animation">
+
+    </div>
 </template>
+
+<script>
+import Header from '../components/Header.vue'
+export default {
+    name: 'AboutView',
+    components: {
+        Header
+    }
+}
+</script>
