@@ -1,7 +1,6 @@
 <template>
 <div class="note-container">note</div>
 <div class="note-text">{{this.note_text}}</div>
-<img src="../assets/logo.png" alt="shit" class="next-note" @click="change_note(2)">
 </template>
 
 <script>
