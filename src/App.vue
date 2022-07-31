@@ -5,5 +5,10 @@
 </template>
 
 <style>
-
+body {
+  margin: 0;
+  font-family: Mukta;
+  background-color: black;
+  color: wheat;
+}
 </style>

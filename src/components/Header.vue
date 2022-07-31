@@ -28,7 +28,24 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
+    background-color: black;
+    color: wheat;
+}
 
+.home-link {
+    text-decoration: none;
+    color: aquamarine;
+    font-size: 2rem;
+}
+
+.home-link:hover {
+    color: royalblue;
+    
+}
+
+.title {
+    font-size: 3rem;
+    letter-spacing: 5px;
 }
 
 .links {
