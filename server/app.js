@@ -11,9 +11,15 @@ const port = process.env.PORT || 3000;
 app.use(express.static('./dist'));
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.sendFile('../dist/index.html')
+})
+
 //routes
-// app.use('/api/v1/projects', projects)
-// app.use('/api/v1/notes', notes)
+app.use('/api/v1/projects', projects)
+app.use('/api/v1/notes', notes)
+
+app.use(notFound)
 
 const start = async () => {
     try {

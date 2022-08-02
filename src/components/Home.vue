@@ -11,9 +11,9 @@
     </div>
     <img src="../assets/hello-world.png" alt="hello world image" class="hello-world">
     <div class="navbar">
-        <router-link to="/projects" class="projects">projects</router-link>
-        <router-link to="/notes" class="notes">notes</router-link>
-        <router-link to="/about" class="about">about this website</router-link>
+        <router-link to="/projects" class="projects route">projects</router-link>
+        <router-link to="/notes" class="notes route">notes</router-link>
+        <router-link to="/about" class="about route">about this website</router-link>
     </div>
 
 </div>
@@ -34,10 +34,10 @@
 }
 
 .name {
-    font-size: 3rem;
+    font-size: 4rem;
     line-height: 90%;
-    color: rgb(67, 43, 226);
-    text-shadow: 2px 2px rgb(217, 64, 94);
+    color: rgb(134, 43, 226);
+    text-shadow: 2px 2px rgb(194, 0, 39);
     margin: 0;
 }
 
@@ -80,17 +80,8 @@ a:hover {
     text-decoration: underline;
 }
 
-.projects {
-    text-shadow: 1px 2px blueviolet;
-}
 
-.notes {
-    text-shadow: 1px 2px royalblue;
-}
 
-.about {
-    text-shadow: 1px 2px crimson;
-}
 
 
 </style>

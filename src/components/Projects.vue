@@ -1,16 +1,15 @@
 <template>
     <div class="projects-container">
-        <h2>{{this.title}}</h2>
-        <img src="../assets/napa-thai.png" alt="site image" class="img-container">
+        <h2 class="title">{{this.title}}</h2>
+        <img :src="this.project_img" alt="site image" class="img">
         <div class="arrows">
             <img src="../assets/left-arrow.png" alt="left arrow" class="arrow left" @click="prevProject()">
             <img src="../assets/right-arrow.png" alt="right arrow" class="arrow right" @click="nextProject()">
         </div>
         <div class="text-container">
             
-            <p>{{current_project}}</p>
             <ul class="skills-list">
-                <li v-for="skill in skills" :key="skill.id">{{skill.title}}</li>
+                <li v-for="skill in skills" :key="skill">{{skill}}</li>
             </ul>
             <p class="project-text">{{this.text}}</p>
             <a href="google.com">view demo</a>
@@ -19,45 +18,90 @@
 </template>
 
 <script>
+
+import axios from 'axios'
+
 export default {
     name: 'projects',
     data() {
         return {
+            projects: [],
             current_project: 1,
-            title: 'Title',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            skills: [{title: 'skill 1', id: 1}, {title: 'skill 2', id: 2}]
+            project_img: require('../assets/project-image-1.webp'),
+            title: 'Napa Thai',
+            text: '',
+            skills: ['typescript'],
+            total_projects: 3,
         }
     },
     methods: {
         prevProject() {
             if (this.current_project === 1) {
-                this.current_project = 4
+                this.current_project = this.total_projects
+                this.changeImg(this.total_projects)
+                this.updateProject(this.total_projects)
             } else {
                 this.current_project --
+                this.changeImg(this.current_project)
+                this.updateProject(this.current_project)
+                console.log(this.title)
             }
         },
         nextProject() {
-            if (this.current_project === 4) {
+            if (this.current_project === this.total_projects) {
                 this.current_project = 1
+                this.changeImg(1)
+                this.updateProject(1)
             } else {
                 this.current_project ++
+                this.changeImg(this.current_project)
+                this.updateProject(this.current_project)
             }
+        }, 
+
+        updateProject(id) {
+            this.title = this.projects[id - 1].title
+            this.text = this.projects[id - 1].description
+            this.skills = this.projects[id - 1].skills
+        },
+        changeImg(id) {
+            if (id === 1) {
+                this.project_img = require('../assets/project-image-1.webp')
+            } else {
+                this.project_img = require(`../assets/project-image-${id}.png`)
+            }
+        },
+    }, 
+    async created() {
+        try {
+            const res = await axios.get('http://localhost:3000/api/v1/projects')
+            this.projects = res.data.projects
+        } catch (err) {
+            console.log(err);
         }
+    
     }
 }
 </script>
 
 <style scoped>
     .projects-container {
-        background-color: white;
+        background-color: black;
     }
 
-    .img-container {
+    .title {
+        font-size: 5em;
+        margin: 0;
+        color: whitesmoke;
+        text-shadow: 3px 2px darkorchid;
+    }
+
+    .img {
         width: 100%;
-        height: 610px;
+        height: 600px;
         object-fit: cover;
         position: relative;
+        opacity: 0.5;
     }
 
     h2 {
@@ -82,8 +126,13 @@ export default {
     .arrow {
         width: 30px;
         padding: 10px;
-        background-color: white;
+        background-color: rgba(200, 200, 255, 0.5);
         border-radius: 10px;
+    }
+
+    .arrow:hover {
+        background-color: rgba(200, 160, 180, 0.8);
+        cursor:pointer;
     }
 
     .text-container {

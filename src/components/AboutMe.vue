@@ -1,7 +1,7 @@
 <template>
     <div class="about-me-container">
         <div class="intro">
-            <img src="../assets/logo.png" alt="fire-img" class="fire-animation">
+            <img src="../assets/fire.png" alt="fire-img" class="fire-animation">
             <div class="text-container">
                 <h2 class="title">About Me</h2> 
                 <p class="text">
@@ -35,7 +35,7 @@
                 <dl>
                     <dt>High School:</dt>
                     <dd>    
-                        In high school I took an Electronics course for 3 years in total and even became certified as a DC electronics technician (I would have gotten my AC cert. as well if not for covid). The second year of this course involved computer electronics: transistors, logic gates, memory units, ALUs, all of which we built from scratch, and I even learned a bit about CPU design. This class, while it didn’t translate to programming expertise, got me fascinated with the higher level design of computers and programming languages, and is the reason I remain interested in computer science to this day. 
+                        In high school I took an Electronics course for 3 years in total and even became certified as a DC electronics technician (I would have gotten my AC cert. as well if not for covid). The second year of this course involved computer electronics: transistors, logic gates, memory units, ALUs, all of which we built from scratch, and I even learned a bit about CPU design. This class, while it didn’t directly translate to programming expertise, got me fascinated with the higher level design of computers and programming languages, and is the reason I remain interested in computer science to this day. 
                         I also took AP CS my senior year where I learned the basics of programming and a lot of general information about how computers and the internet work. My senior year was entirely online and asynchronous, so I also improved my self-study habits and became accustomed to solving problems without supervision. 
                     </dd>
                     <dt>College (William and Mary):</dt>
@@ -115,10 +115,15 @@
 
 .education-container {
     width: 44%;
+    display: flex;
+    flex-direction: column;
 }
 
 .projects-container {
     width: 30%;
+    display: flex;
+    flex-direction: column;
+
 }
 
 
@@ -135,6 +140,8 @@ dt {
 a {
     text-decoration: none;
     color: skyblue;
+    text-align: center;
+    width: 100%
 }
 
 a:hover {
