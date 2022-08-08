@@ -9,8 +9,9 @@ const getAllProjects = asyncWrapper(async (req, res) => {
 })
 
 const getNote = asyncWrapper(async (req, res) => {
-    const {title: noteId} = req.params
-    const note = await Note.findOne({ title: noteId })
+    const {title: title} = req.params
+    const note = await Note.findOne({ title: title })
+    res.header("Access-Control-Allow-Origin", "*");
     res.status(200).json({ note })
 })
 

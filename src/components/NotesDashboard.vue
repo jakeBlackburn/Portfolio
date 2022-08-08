@@ -1,37 +1,15 @@
 <template>
     <div class="notes-dashboard">
         <div class="notes-nav">
-            <div>
-                <h6>topic</h6>
-                <p>note</p>
-                <p>note</p>
-                <p>note</p>
-            </div>
-            <div>
-                <h6>topic</h6>
-                <p>note</p>
-                <p>note</p>
-                <p>note</p>
-            </div>
-            <div>
-                <h6>topic</h6>
-                <p>note</p>
-                <p>note</p>
-                <p>note</p>
-            </div>
-            <div>
-                <h6>topic</h6>
-                <p>note</p>
-                <p>note</p>
-                <p>note</p>
-            </div>
+            <h3 class="note" v-for="title in notes" :key="title" @click="this.getNote(title.toLowerCase())">{{title.replace(/-/g, " ")}}</h3>
         </div>
-        <Note :note_id="note_id"/>
+        <Note :note="note" />
     </div>
 </template>
 
 <script>
 import Note from './Note.vue'
+import axios from 'axios'
 
 export default {
     name: 'notes-dashboard',
@@ -41,8 +19,22 @@ export default {
     data() {
         
         return {
-            note_id: 1
+            note: {},
+            notes: ['Web-Development','Javascript', 'HTML', 'CSS']
         }
+    },
+    methods: {
+        async getNote(title) {
+            try {
+                const res = await axios.get(`http://localhost:3000/api/v1/notes/${title}`)
+                this.note = res.data.note
+            } catch (err) {
+                console.log(err)
+            }
+        }
+    },
+    created() {
+        this.getNote('javascript')
     }
 }
 </script>

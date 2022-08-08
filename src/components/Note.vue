@@ -1,6 +1,10 @@
 <template>
-<div class="note-container">note</div>
-<div class="note-text">{{this.note_text}}</div>
+<div class="title">{{this.note.title}}</div>
+<div class="version">{{this.note.version}}</div>
+<div class="overview">{{this.note.overview}}</div>
+<div class="text" v-for="paragraph in note.text" :key="paragraph.id">{{paragraph.text}}</div>
+
+
 </template>
 
 <script>
@@ -16,7 +20,7 @@ export default {
         this.note_text = 'note 1'
     },
     props: {
-        note_id: Number,
+        note: Object,
     },
     methods: {
         change_note(id) {

@@ -3,7 +3,7 @@
         <div class="intro">
             <img src="../assets/fire.png" alt="fire-img" class="fire-animation">
             <div class="text-container">
-                <h2 class="title">About Me</h2> 
+                <h2 class="text-title">About Me</h2> 
                 <p class="text">
                     My experience in programming began in a high school electronics class where I became fascinated with these incredibly useful and complex
                     machines we call computers. This drove me to learn python on my own and since then I’ve been immersed in the world of computer science. In
@@ -61,9 +61,8 @@
                     <dt>Pure Eats</dt>
                     <dd>Basic one page app made with Vue.js made for a local restaurant in my hometown. Supports online ordering through a third party service.</dd>
                     <dt>portfolio (this website)</dt>
-                    <dd>
-                        <router-link to="/about">see about page</router-link>
-                    </dd>
+                    <dd>Vue.js application with multiple routes. Consumes an API built with express and MongoDB Atlas to get the data and text for the projects and notes page. This is my portfolio so it includes a stylish landing page with a 3D animation rendered with three.js, a projects page showing off all the websites I've built, and a notes page to catalogue and showcase what I've learned as well as to help me review and internalize my skills and knowledge</dd>
+              
                 </dl>
             </div>
         </div>
@@ -78,9 +77,15 @@
 
 .intro {
     position: relative;
+    margin-top: 80px;
 }
 
 .text-container {
+    margin-top: 1000px;
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    color: black;
     width: 60%;
     text-align: center;
     margin: 0 20%;
@@ -105,36 +110,57 @@
     background: linear-gradient(0deg, rgb(50, 25, 80), rgb(30, 25, 40));
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     padding: 100px 3% 0 3%;
     color: pink;
 }
 
 .skills-container {
-    width: 20%;
+    width: 18%;
+    
+    background-color: antiquewhite;
+    border-radius: 8px;
+    padding: 25px 15px;
 }
 
 .education-container {
-    width: 44%;
+    width: 42%;
     display: flex;
     flex-direction: column;
+    background-color: lightcyan;
+    border-radius: 8px;
+    padding: 25px 15px;
+
 }
 
 .projects-container {
-    width: 30%;
+    width: 28%;
     display: flex;
     flex-direction: column;
+    border-radius: 8px;
+    background-color: lemonchiffon;
+    padding: 25px 15px;
+
 
 }
 
 
 .title {
     font-size: 1.5rem;
-    color: white;
+    color: black;
     text-align: center;
+    margin: 0;
 }   
 
 dt {
-    color: wheat;
+    color: slateblue;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+dd {
+    color: slategray;
+    font-size: 0.8rem
 }
 
 a {

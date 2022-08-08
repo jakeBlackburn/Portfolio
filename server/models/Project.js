@@ -13,6 +13,9 @@ const ProjectSchema = new mongoose.Schema({
   },
   skills: {
     type: Array,
+  },
+  url: {
+    type: String
   }
 
 })

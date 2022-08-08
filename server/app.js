@@ -21,9 +21,13 @@ app.use('/api/v1/notes', notes)
 
 app.use(notFound)
 
+const username = encodeURIComponent(process.env.ATLAS_USERNAME)
+const password = encodeURIComponent(process.env.ATLAS_PASSWORD)
+
+
 const start = async () => {
     try {
-      await connectDB(process.env.MONGO_URI);
+      await connectDB(`mongodb+srv://${username}:${password}@portfolio-cluster.sknurkv.mongodb.net/portfolio-db?retryWrites=true&w=majority`);
       app.listen(port, () =>
         console.log(`Server is listening on port ${port}...`)
       );

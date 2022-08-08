@@ -12,7 +12,7 @@
                 <li v-for="skill in skills" :key="skill">{{skill}}</li>
             </ul>
             <p class="project-text">{{this.text}}</p>
-            <a href="google.com">view demo</a>
+            <a :href="this.url">view demo</a>
         </div>
     </div>
 </template>
@@ -26,12 +26,19 @@ export default {
     data() {
         return {
             projects: [],
-            current_project: 1,
+        
             project_img: require('../assets/project-image-1.webp'),
-            title: 'Napa Thai',
+
+            title: '',
             text: '',
-            skills: ['typescript'],
-            total_projects: 3,
+            skills: [],
+            url: '',
+
+            project: {},
+
+            current_project: 1,
+            total_projects: 4,
+            
         }
     },
     methods: {
@@ -44,7 +51,6 @@ export default {
                 this.current_project --
                 this.changeImg(this.current_project)
                 this.updateProject(this.current_project)
-                console.log(this.title)
             }
         },
         nextProject() {
@@ -60,9 +66,11 @@ export default {
         }, 
 
         updateProject(id) {
+            this.project = this.projects[id - 1]
             this.title = this.projects[id - 1].title
             this.text = this.projects[id - 1].description
             this.skills = this.projects[id - 1].skills
+            this.url = this.projects[id - 1].url
         },
         changeImg(id) {
             if (id === 1) {
@@ -76,6 +84,7 @@ export default {
         try {
             const res = await axios.get('http://localhost:3000/api/v1/projects')
             this.projects = res.data.projects
+            this.updateProject(1)
         } catch (err) {
             console.log(err);
         }
