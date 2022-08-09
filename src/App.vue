@@ -7,7 +7,7 @@
 <style>
 body {
   margin: 0;
-  font-family: Mukta;
+  font-family: Inconsolata;
   background-color: black;
   color: wheat;
 }

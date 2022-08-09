@@ -2,18 +2,19 @@
    <div>
         <Header :currPage="'about'" :pages="['projects', 'notes']"/>
         <p>about this website</p>
-        <img src="logo.png" alt="hello world animation">
-        <img src="logo.png" alt="fire animation">
+        <HelloWorldCanvas />
 
     </div>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
+import HelloWorldCanvas from '../components/HelloWorldCanvas.vue'
 export default {
     name: 'AboutView',
     components: {
-        Header
+        Header,
+        HelloWorldCanvas
     }
 }
 </script>

@@ -2,6 +2,7 @@
   <div class="home-container">
     <Home />
     <AboutMe />
+    <Footer />
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 import HelloWorldCanvas from '../components/HelloWorldCanvas.vue'
 import Home from '../components/Home.vue'
 import AboutMe from '../components/AboutMe.vue'
+import Footer from '../components/Footer.vue'
 
 
 export default {
@@ -16,7 +18,8 @@ export default {
   components: {
     HelloWorldCanvas,
     Home,
-    AboutMe
+    AboutMe,
+    Footer
   }
 }
 </script>

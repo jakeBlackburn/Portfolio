@@ -1,6 +1,6 @@
 <template>
     <div class="about-me-container">
-        <div class="intro">
+        <div class="introduction">
             <img src="../assets/fire.png" alt="fire-img" class="fire-animation">
             <div class="text-container">
                 <h2 class="text-title">About Me</h2> 
@@ -47,12 +47,12 @@
                         Over the past year I have completed many online tutorials and hours of research and reading on my own. All my notes on projects, tutorials, and various topics can be found on the Notes page
                     </dd>
                 </dl>
-                <router-link to="/notes">View Notes</router-link>
+                <router-link to="/notes">View Notes Page</router-link>
             </div>
             <div class="projects-container">
                 <h4 class="title">Projects</h4>
                 <p class="projects-text">All my projects are listed below. A more comprehensive description of each project can be found on the Projects page or in the readme for each project which can be found on my github.</p>
-                <router-link to='/projects'>see projects page</router-link>
+                <router-link to='/projects'>View Projects Page</router-link>
                 <dl>
                     <dt>Blue Sky</dt>
                     <dd>Basic one page app made with React, Webpack and Express made for a local restaurant in my hometown. Supports online ordering through a third party service.</dd>
@@ -75,39 +75,44 @@
     background-color: rgb(30, 25, 40);
 }
 
-.intro {
+.introduction {
     position: relative;
     margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-title {
+    font-size: 3rem;
+    margin: 20px 0 0 0;
+    font-family: Teko;
+    color: steelblue;
+}
+
+.text {
+    margin: 30px
 }
 
 .text-container {
-    margin-top: 1000px;
     padding: 10px;
     background-color: aliceblue;
     border-radius: 10px;
     color: black;
-    width: 60%;
+    width: 50%;
     text-align: center;
-    margin: 0 20%;
 }
 
 .fire-animation {
-    position: absolute;
-    top: 20px;
-    left: 20px;
     width: 150px
 }
 
 .headshot {
     height: 300px;
     width: 200px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
 }
 
 .experience-container {
-    background: linear-gradient(0deg, rgb(50, 25, 80), rgb(30, 25, 40));
+    background: linear-gradient(0deg, rgb(84, 48, 127), rgb(30, 25, 40));
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -116,20 +121,22 @@
 }
 
 .skills-container {
-    width: 18%;
-    
+    width: 18%;  
     background-color: antiquewhite;
     border-radius: 8px;
-    padding: 25px 15px;
+    padding: 25px;
+    margin: 2%;
 }
 
 .education-container {
     width: 42%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: lightcyan;
     border-radius: 8px;
-    padding: 25px 15px;
+    padding: 25px;
+    margin: 2%;
 
 }
 
@@ -137,41 +144,53 @@
     width: 28%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     border-radius: 8px;
-    background-color: lemonchiffon;
-    padding: 25px 15px;
+    background-color: aliceblue;
+    padding: 25px;
+    margin: 2%;
+}
 
-
+.projects-text {
+    color: hotpink;
+    text-align: center;
 }
 
 
 .title {
     font-size: 1.5rem;
-    color: black;
+    color: steelblue;
     text-align: center;
     margin: 0;
+    font-family: Teko;
 }   
 
 dt {
     color: slateblue;
     font-size: 0.9rem;
     text-align: center;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
 }
 
 dd {
     color: slategray;
-    font-size: 0.8rem
+    font-size: 0.8rem;
+    margin: 0
 }
 
 a {
     text-decoration: none;
-    color: skyblue;
+    color: dodgerblue;
     text-align: center;
-    width: 100%
+    width: 50%;
+    padding: 10px;
 }
 
 a:hover {
-    color: crimson;
+    color: hotpink;
+    border-radius: 3px;
+    background-color: rgba(127, 255, 212, 0.2);
 }
 
 

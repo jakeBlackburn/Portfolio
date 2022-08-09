@@ -1,5 +1,9 @@
 <template>
 <div class="home-top-container">
+    <div class="hello-world-container">
+        <HelloWorldCanvas class="hello-world" />
+    </div>
+    <h3 class="hello"><em>HELLO!</em></h3>
     <div class="name-card">
         <h1 class="name"><em>Jake<br>Blackburn</em></h1>
         <h4 class="position">Web Developer and Designer</h4>
@@ -9,7 +13,6 @@
             <a href="https://www.linkedin.com/in/jake-blackburn-53a94b246/" class="linkedin link">linkedin</a>
         </div>
     </div>
-    <img src="../assets/hello-world.png" alt="hello world image" class="hello-world">
     <div class="navbar">
         <router-link to="/projects" class="projects route">projects</router-link>
         <router-link to="/notes" class="notes route">notes</router-link>
@@ -18,46 +21,70 @@
 
 </div>
 
-
 </template>
+
+
+<script>
+    import HelloWorldCanvas from './HelloWorldCanvas'
+    export default {
+        components: {
+            HelloWorldCanvas
+        }
+    }
+
+</script>
+
+
 
 <style scoped>
 
 
 .name-card {
-    height: 400px;
+    height: 300px;
     display: flex;
-    width: 50%;
     flex-direction: column;
     justify-content: center;
-    margin-left: 10%;
+    align-items: center;
+    margin: 100px 0  0 50%;
+    text-align: center;
 }
 
 .name {
-    font-size: 4rem;
+    font-size: 6rem;
     line-height: 90%;
-    color: rgb(134, 43, 226);
-    text-shadow: 2px 2px rgb(194, 0, 39);
+    color: rgb(0, 140, 255);
+    text-shadow: 2px 3px hotpink;
     margin: 0;
+    font-family: Teko;
+    text-align: left;
+    
 }
 
 .position {
-    color: rgb(255, 107, 131);
+    color: rgb(255, 100, 130);
 }
 
 
-.hello-world {
-    height: 200px;
-    width: 300px;
+.hello-world-container {
     position: absolute;
-    right: 10%;
-    top: 50px;
+    left: 10%;
+    top: 0px;
+    background: radial-gradient(skyblue, hotpink, black, black);
+}
 
+.hello {
+    font-size: 7rem;
+    color: hotpink;
+    text-shadow: 4px 5px black;
+    font-family: Teko;
+    position: absolute;
+    left: 310px;
+    top: 60px;
 }
 
 .navbar {
+    margin-top: 150px;
     display: flex;
-    /* background-color: rgb(20, 20, 30); */
     background-image: linear-gradient(0deg, rgb(30, 25, 40), black);
     height: 120px;
     justify-content: space-around;
@@ -69,10 +96,13 @@
 a {
     color: wheat;
     text-decoration: none;
+    padding: 10px;
 }
 a:hover {
     color: royalblue;
     text-shadow: none;
+    background-color: rgba(255, 0, 170, 0.1);
+    border-radius: 3px;
 }
 
 .link {
