@@ -146,6 +146,7 @@ export default {
 
     .text-container {
         border-top: 3px solid black;
+        padding: 50px 0;
         display: flex;
         justify-content: space-evenly;
         align-items: center;

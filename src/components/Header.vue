@@ -23,29 +23,34 @@ export default {
 <style scoped>
 
 .header-container {
-    height: 150px;
+    height: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    background-color: black;
+    background: linear-gradient(90deg, black, slateblue);
     color: wheat;
+    border-bottom: 1px solid wheat;
 }
 
 .home-link {
     text-decoration: none;
     color: aquamarine;
-    font-size: 2rem;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 4px;
 }
 
 .home-link:hover {
-    color: royalblue;
+    color: violet;
+    background-color: rgba(255, 105, 180, 0.1);
     
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 4rem;
     letter-spacing: 5px;
+    font-family: Teko;
 }
 
 .links {
@@ -54,7 +59,17 @@ export default {
 }
 
 .link {
-    padding: 0 10%;
+    padding: 10%;
+    border-radius: 3px;
+    text-decoration: none;
+    color: honeydew;
+    margin: 10px;
+    font-size: 1.1rem;
+}
+
+.link:hover {
+    color: violet;
+    background-color: rgba(255, 105, 180, 0.1);
 }
 
 

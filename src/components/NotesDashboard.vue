@@ -20,7 +20,7 @@ export default {
         
         return {
             note: {},
-            notes: ['Web-Development','Javascript', 'HTML', 'CSS']
+            notes: ['Web-Development','Javascript', 'HTML', 'CSS', 'About-Notes']
         }
     },
     methods: {
@@ -34,7 +34,7 @@ export default {
         }
     },
     created() {
-        this.getNote('javascript')
+        this.getNote('about-notes')
     }
 }
 </script>
@@ -46,12 +46,9 @@ export default {
 }
 
 .notes-nav {
-    resize: horizontal;
     border: 2px solid black;
-    overflow: scroll;
     height: 600px;
-    width: 25%;
-    max-width: 60%;
+    width: 20%;
     background-color: rgb(30, 25, 40);
 }
 

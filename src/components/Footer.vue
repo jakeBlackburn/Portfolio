@@ -11,7 +11,7 @@
 
 <style scoped>
 .footer-container {
-    height: 1000px;
+    height: 750px;
     background: linear-gradient(0deg, pink, aquamarine, skyblue, royalblue, rgb(84, 48, 127));
 }
 </style>

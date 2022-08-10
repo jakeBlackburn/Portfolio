@@ -1,8 +1,8 @@
 <template>
     <div class="about-me-container">
         <div class="introduction">
-            <img src="../assets/fire.png" alt="fire-img" class="fire-animation">
             <div class="text-container">
+                <img src="../assets/fire.gif" alt="fire-img" class="fire-animation">
                 <h2 class="text-title">About Me</h2> 
                 <p class="text">
                     My experience in programming began in a high school electronics class where I became fascinated with these incredibly useful and complex
@@ -13,7 +13,7 @@
                     what I’ve learned to a job where I can learn more, talk with talented developers, and write some useful code!
                 </p>
             </div>
-            <img src="../assets/logo.png" alt="headshot" class="headshot">
+
         </div>
        
         <div class="experience-container">
@@ -76,34 +76,45 @@
 }
 
 .introduction {
-    position: relative;
     margin-top: 80px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .text-title {
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 20px 0 0 0;
     font-family: Teko;
-    color: steelblue;
+    color: wheat;
+    text-shadow: 3px 3px black;
+    z-index: 1;
+    position: absolute;
+    top: 50px;
+    left: 40%;
 }
 
 .text {
     margin: 30px
+
 }
 
 .text-container {
-    padding: 10px;
-    background-color: aliceblue;
+    padding: 150px 10px 10px 10px;
+    background-color: black;
     border-radius: 10px;
-    color: black;
+    color: rgb(170, 170, 190);
     width: 50%;
     text-align: center;
+    position: relative;
 }
 
 .fire-animation {
-    width: 150px
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top: 10px;
+    left: 40%;
+    z-index: 0;
 }
 
 .headshot {
