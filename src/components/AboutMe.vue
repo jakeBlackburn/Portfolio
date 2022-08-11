@@ -127,7 +127,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 100px 3% 0 3%;
+    padding: 150px 3% 0px 3%;
     color: pink;
 }
 
@@ -137,6 +137,8 @@
     border-radius: 8px;
     padding: 25px;
     margin: 2%;
+    position: sticky;
+    top: 150px
 }
 
 .education-container {
@@ -148,7 +150,8 @@
     border-radius: 8px;
     padding: 25px;
     margin: 2%;
-
+    position: sticky;
+    top: 60px
 }
 
 .projects-container {

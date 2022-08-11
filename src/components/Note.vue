@@ -16,11 +16,8 @@ export default {
     name: 'note',
     data() {
         return {
-            note_text: '',
+            title: 'about notes'
         }
-    },
-    created() {
-        this.note_text = 'note 1'
     },
     props: {
         note: Object,
@@ -29,6 +26,9 @@ export default {
         change_note(id) {
             this.note_text = `note ${id}`
         }
+    },
+    mounted() {
+        this.title = this.note.title
     }
 
 
@@ -42,7 +42,7 @@ export default {
     display: flex;
     flex-direction: column;
     color: slateblue;
-    background-color:lightpink;
+    background-color:aliceblue;
     padding: 5%;
 }
 
@@ -54,7 +54,7 @@ export default {
 }
 
 .overview {
-    color: crimson;
+    color: hotpink;
     text-align: center;
 }
 

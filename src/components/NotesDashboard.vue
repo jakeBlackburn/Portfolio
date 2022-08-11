@@ -1,6 +1,7 @@
 <template>
     <div class="notes-dashboard">
-        <div class="notes-nav">
+        <img class="toggle-arrow" :src="toggled ? require('../assets/right-arrow.png') : require('../assets/left-arrow.png')" @click="toggleNav()">
+        <div class="notes-nav" :style="{ display: toggled ? 'none' : 'block', position: toggled ? 'absolute' : 'static' }">
             <h3 class="note" v-for="title in notes" :key="title" @click="this.getNote(title.toLowerCase())">{{title.replace(/-/g, " ")}}</h3>
         </div>
         <Note :note="note" />
@@ -19,7 +20,11 @@ export default {
     data() {
         
         return {
-            note: {},
+            note: {
+                title: 'about-notes',
+
+            },
+            toggled: false,
             notes: ['Web-Development','Javascript', 'HTML', 'CSS', 'About-Notes']
         }
     },
@@ -31,6 +36,9 @@ export default {
             } catch (err) {
                 console.log(err)
             }
+        },
+        toggleNav() {
+            this.toggled = !this.toggled
         }
     },
     created() {
@@ -43,13 +51,30 @@ export default {
 .notes-dashboard {
     background-color: white;
     display: flex;
+    position: relative;
 }
 
 .notes-nav {
-    border: 2px solid black;
-    height: 600px;
-    width: 20%;
+    min-width: 20%;
     background-color: rgb(30, 25, 40);
+    border-right: 1px solid black;
+}
+
+.toggle-arrow {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 25px;
+    height: 30px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0 5px 5px 0
+}
+
+.toggle-arrow:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.4);
+
 }
 
 </style>

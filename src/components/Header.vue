@@ -30,7 +30,7 @@ export default {
     padding: 0 5%;
     background: linear-gradient(90deg, black, slateblue);
     color: wheat;
-    border-bottom: 1px solid wheat;
+    border-bottom: 1px solid pink;
 }
 
 .home-link {

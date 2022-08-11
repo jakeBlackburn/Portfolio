@@ -3,8 +3,8 @@
         <h2 class="title">{{this.title}}</h2>
         <img :src="this.project_img" alt="site image" class="img">
         <div class="arrows">
-            <img src="../assets/left-arrow.png" alt="left arrow" class="arrow left" @click="prevProject()">
-            <img src="../assets/right-arrow.png" alt="right arrow" class="arrow right" @click="nextProject()">
+            <img src="../assets/left-arrow.png" alt="left arrow" class="arrow left" @click="isLoading ? null : prevProject()">
+            <img src="../assets/right-arrow.png" alt="right arrow" class="arrow right" @click="isLoading ? null : nextProject()">
         </div>
         <div class="text-container">
             
@@ -12,7 +12,11 @@
                 <li v-for="skill in skills" :key="skill">{{skill}}</li>
             </ul>
             <p class="project-text">{{this.text}}</p>
-            <a :href="this.url">view demo</a>
+            <div class="links">
+                <a class="demo" :href="this.urls[0]" v-if="this.urls[0] !== ''">View Demo</a>
+                <a class="source" :href="this.urls[1]">Source Code</a>
+            </div>
+
         </div>
     </div>
 </template>
@@ -26,15 +30,14 @@ export default {
     data() {
         return {
             projects: [],
+            isLoading: true,
         
             project_img: require('../assets/project-image-1.webp'),
 
-            title: '',
-            text: '',
-            skills: [],
-            url: '',
-
-            project: {},
+            title: 'loading...',
+            text: 'loading...',
+            skills: ['loading...'],
+            urls: [],
 
             current_project: 1,
             total_projects: 4,
@@ -66,11 +69,10 @@ export default {
         }, 
 
         updateProject(id) {
-            this.project = this.projects[id - 1]
             this.title = this.projects[id - 1].title
             this.text = this.projects[id - 1].description
             this.skills = this.projects[id - 1].skills
-            this.url = this.projects[id - 1].url
+            this.urls = this.projects[id - 1].urls
         },
         changeImg(id) {
             if (id === 1) {
@@ -85,6 +87,7 @@ export default {
             const res = await axios.get('http://localhost:3000/api/v1/projects')
             this.projects = res.data.projects
             this.updateProject(1)
+            this.isLoading = false
         } catch (err) {
             console.log(err);
         }
@@ -103,6 +106,11 @@ export default {
         margin: 0;
         color: whitesmoke;
         text-shadow: 3px 2px darkorchid;
+        position: absolute;
+        top: 350px;
+        left: 25%;
+        text-align: center;
+        z-index: 1;
     }
 
     .img {
@@ -111,15 +119,6 @@ export default {
         object-fit: cover;
         position: relative;
         opacity: 0.5;
-    }
-
-    h2 {
-        position: absolute;
-        top: 350px;
-        left: 25%;
-        font-size: 3rem;
-        text-align: center;
-        z-index: 1;
     }
 
     .arrows {
@@ -145,33 +144,55 @@ export default {
     }
 
     .text-container {
-        border-top: 3px solid black;
-        padding: 50px 0;
+        padding: 50px 25px 100px 50px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        background: linear-gradient(0deg, rgb(84, 48, 127), rgb(30, 25, 40));
     }
 
     .skills-list {
-        max-width: 30%;
+        max-width: 20%;
+        padding: 10px 40px;
+        background-color: lightpink;
+        color: purple;
+        border-radius: 5px;
+        font-size: 1.2rem;
     }
 
     .project-text {
-        max-width: 50%;
+        max-width: 40%;
+        text-align: center;
+        padding: 30px 50px;
+        border-radius: 5px;
+        background-color: aliceblue;
+        color: hotpink;
+        font-size: 1.5rem;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
     }
 
     a {
         text-decoration: none;
-        color: wheat;
-        border: 3px solid rosybrown;
-        background-color: black;
+        text-align: center;
         border-radius: 5px;
         height: 25px;
-        padding: 10px;
+        padding: 10px 10px 5px 10px;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: wheat;
     }
 
     a:hover {
-        color: black;
-        background-color: wheat;
+        color: hotpink;
+        background-color: rgba(65, 105, 225, 0.6);
     }
+
+    .source {
+        margin-top: 20px;
+
+    }
+
 </style>
