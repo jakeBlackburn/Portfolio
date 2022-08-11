@@ -4,7 +4,7 @@
         <div class="notes-nav" :style="{ display: toggled ? 'none' : 'block', position: toggled ? 'absolute' : 'static' }">
             <h3 class="note" v-for="title in notes" :key="title" @click="this.getNote(title.toLowerCase())">{{title.replace(/-/g, " ")}}</h3>
         </div>
-        <Note :note="note" />
+        <Note :note="note" :isLoading="isLoading" />
     </div>
 </template>
 
@@ -20,19 +20,19 @@ export default {
     data() {
         
         return {
-            note: {
-                title: 'about-notes',
-
-            },
+            isLoading: true,
+            note: {},
             toggled: false,
             notes: ['Web-Development','Javascript', 'HTML', 'CSS', 'About-Notes']
         }
     },
     methods: {
         async getNote(title) {
+            this.isLoading = true
             try {
                 const res = await axios.get(`http://localhost:3000/api/v1/notes/${title}`)
                 this.note = res.data.note
+                this.isLoading = false
             } catch (err) {
                 console.log(err)
             }
@@ -52,12 +52,19 @@ export default {
     background-color: white;
     display: flex;
     position: relative;
+    border-bottom: 1px solid darkorchid;
 }
 
 .notes-nav {
-    min-width: 20%;
+    min-width: 18%;
     background-color: rgb(30, 25, 40);
     border-right: 1px solid black;
+    padding-left: 45px;
+}
+
+.note:hover {
+    cursor: pointer;
+    color:aquamarine;
 }
 
 .toggle-arrow {
@@ -68,12 +75,13 @@ export default {
     height: 30px;
     padding: 5px;
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 0 5px 5px 0
+    border-radius: 0 5px 5px 0;
+    z-index: 1;
 }
 
 .toggle-arrow:hover {
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 192, 203, 0.5);
 
 }
 
