@@ -1,9 +1,9 @@
 <template>
 <div class="home-top-container">
-    <div class="hello-world-container">
-        <HelloWorldCanvas class="hello-world" />
+    <img class="loading" src="../assets/loading-spinner.gif" :style="isLoaded ? 'display: none;' : ''" >
+    <div class="hello-world-container" :style="isLoaded ? '' : 'display: none;'" >
+        <HelloWorldCanvas />
     </div>
-    <h3 class="hello"><em>HELLO!</em></h3>
     <div class="name-card">
         <h1 class="name"><em>Jake<br>Blackburn</em></h1>
         <h4 class="position">Web Developer and Designer</h4>
@@ -29,6 +29,19 @@
     export default {
         components: {
             HelloWorldCanvas
+        },
+        data() {
+            return {
+                isLoaded: false,
+            }
+        },
+        methods: {
+
+        },
+        mounted() {
+            setTimeout(() => {
+                this.isLoaded = true
+            }, 1800)
         }
     }
 
@@ -64,6 +77,13 @@
     color: rgb(255, 100, 130);
 }
 
+.loading {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 195px;
+    left: 350px;
+}
 
 .hello-world-container {
     position: absolute;
@@ -72,15 +92,6 @@
     background: radial-gradient(skyblue, hotpink, black, black);
 }
 
-.hello {
-    font-size: 7rem;
-    color: hotpink;
-    text-shadow: 4px 5px black;
-    font-family: Teko;
-    position: absolute;
-    left: 310px;
-    top: 60px;
-}
 
 .navbar {
     margin-top: 150px;
