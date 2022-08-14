@@ -23,7 +23,7 @@ export default {
             isLoading: true,
             note: {},
             toggled: false,
-            notes: ['Web-Development','Javascript', 'HTML', 'CSS', 'About-Notes']
+            notes: ['About-Notes','Web-Development', 'Frontend', 'Backend', 'Javascript', 'HTML', 'CSS', 'React', 'Angular', 'Vue.js', 'Express']
         }
     },
     methods: {
@@ -51,7 +51,6 @@ export default {
 .notes-dashboard {
     background-color: white;
     display: flex;
-    position: relative;
     border-bottom: 1px solid darkorchid;
 }
 
@@ -68,7 +67,7 @@ export default {
 }
 
 .toggle-arrow {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 50%;
     width: 25px;

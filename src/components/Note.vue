@@ -5,7 +5,7 @@
     <section class="overview">{{isLoading ? '' : this.note.overview}}</section>
     <div class="text" v-for="paragraph in note.text" :key="paragraph.id">
         <h4 class="text-title">{{isLoading ? '' : paragraph.title}}</h4>
-        <p class="text">{{isLoading ? '' : paragraph.text}}</p>
+        <p class="text" v-for="section in paragraph.text" :key="section">{{isLoading ? '' : section}}</p>
     </div>
 </div>
 </template>
