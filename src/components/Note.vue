@@ -5,12 +5,15 @@
     <section class="overview">{{isLoading ? '' : this.note.overview}}</section>
     <div class="text" v-for="paragraph in note.text" :key="paragraph.id">
         <h4 class="text-title">{{isLoading ? '' : paragraph.title}}</h4>
-        <p class="text" v-for="section in paragraph.text" :key="section">{{isLoading ? '' : section}}</p>
+        <p class="text" v-for="section in paragraph.text" :key="section.id" :style="{order: section.order}">{{isLoading ? '' : section.content}}</p>
+        <CodeSnippet v-for="snippet in paragraph.code" :key="snippet.id" :style="{order: snippet.order}"  :code="{ caption: snippet.caption, code: snippet.content}" />
     </div>
 </div>
 </template>
 
 <script>
+
+import CodeSnippet from './CodeSnippet.vue'
 
 export default {
     name: 'note',
@@ -18,6 +21,9 @@ export default {
         return {
             title: 'about notes'
         }
+    },
+    components: {
+        CodeSnippet
     },
     props: {
         note: Object,
@@ -81,6 +87,8 @@ export default {
 
 .text {
     font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 

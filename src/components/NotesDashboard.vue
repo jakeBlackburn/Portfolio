@@ -69,7 +69,7 @@ export default {
 .toggle-arrow {
     position: fixed;
     left: 0;
-    top: 50%;
+    top: 40%;
     width: 25px;
     height: 30px;
     padding: 5px;
