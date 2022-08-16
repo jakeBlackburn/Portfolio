@@ -1,14 +1,14 @@
 <template>
-   <div>
-        <Header :currPage="'about'" :pages="['projects', 'notes']"/>
-        <p class="overview">This website is built with vue.js and retrieves its data from a NoSql database hosted on MongoDB Atlas and served with Express. The homepage contains basic details, contact information, etc., as well as a 3D animation rendered with three.js. The projects page shows off all my projects in detail, and the notes page houses all my personal notes on each of my projects, the technologies I learn, and my overall understanding of computer science. (the following info is taken from the README)</p>
+   <div class="container">
+        <Header :currPage="'about'" :pages="['projects']"/>
+        <p class="overview">This website is built with vue.js and retrieves its data from a NoSql database hosted on MongoDB Atlas and served with Express. The homepage contains basic details, contact information, etc., as well as a 3D animation rendered with three.js. The projects page shows off all my projects in detail, and soon I plan to add a notes page housing all my personal notes on each of my projects, the technologies I learn, and my overall understanding of computer science. (the following info is taken from the README)</p>
         <div class="about-container">
             <div class="section frontend">
                 <h2 class="title">FRONTEND</h2>
                 <h4 class="subtitle">Styles</h4>
                 <p class="text">The site uses raw CSS to style everything. You can find examples of sticky, absolute, and relative position, flexbox, linear and radial color gradients, and more CSS tricks in the source code.</p>
                 <h4 class="subtitle">3D Animation</h4>
-                <p class="text">The Landing page includes a 3D animation of the earth spinning, rendered with Trois.js. Trois is a library built on Three.js which makes it simple to render three.js models and animations in a Vue.js environment. I would have liked to have a loading spinner that exists until the 3D animation is loaded but trois.js does not include the 'LoaderManager' functionality from three.js, so I've gone with the simple but sloppy solution of simply waiting a couple seconds before displaying the 3D animation.</p>
+                <p class="text">The Landing page includes a 3D animation of the earth spinning, rendered with Trois.js. Trois is a library built on Three.js which makes it simple to render three.js models and animations in a Vue.js environment. I would have liked to have a loading spinner that exists until the 3D animation is loaded but trois.js does not include the 'LoaderManager' functionality from three.js, so I've gone with the simple solution of waiting a couple seconds before displaying the 3D animation.</p>
                 <h4 class="subtitle">Functionality</h4>
                 <p class="text">The pages are mostly static, so functionality is not very complicated. The 'projects' and 'notes' pages both retrieve data from the backend, so they both have 'fetch' functions which not only retireve the data using axios, but will display 'loading...' while the data is still on its way.</p>
             </div>
@@ -41,6 +41,12 @@ export default {
 
 
 <style scoped>
+
+.container {
+    background-color: rgb(80, 80, 120);
+
+}
+
 .overview {
     text-align: center;
     margin: 100px;
@@ -55,6 +61,7 @@ export default {
     display: flex;
     justify-content: space-around;
     padding-bottom: 200px;
+    border-bottom: 1px solid darkmagenta;
 }
 
 .section {

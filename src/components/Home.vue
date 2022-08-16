@@ -15,7 +15,7 @@
     </div>
     <div class="navbar">
         <router-link to="/projects" class="projects route">projects</router-link>
-        <router-link to="/notes" class="notes route">notes</router-link>
+        <!-- <router-link to="/notes" class="notes route">notes</router-link> -->
         <router-link to="/about" class="about route">about this website</router-link>
     </div>
 
@@ -100,8 +100,9 @@
     height: 120px;
     justify-content: space-around;
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     text-shadow: 1px 1px royalblue;
+    font-family: Teko;
 }
 
 a {
@@ -110,7 +111,7 @@ a {
     padding: 10px;
 }
 a:hover {
-    color: royalblue;
+    color: hotpink;
     text-shadow: none;
     background-color: rgba(255, 0, 170, 0.1);
     border-radius: 3px;
@@ -121,8 +122,30 @@ a:hover {
     text-decoration: underline;
 }
 
+.link:hover {
+    color:aqua;
+}
 
 
 
+@media screen and (max-width: 1155px) {
+  .hello-world-container {
+    display: none;
+    position: absolute;
+  }
+
+  .loading {
+    display: none;
+    position: absolute;
+  }
+
+  .name-card {
+    margin: 100px 0 0 0;
+  }
+
+  .navbar {
+    margin-top: 50px;
+  }
+}
 
 </style>

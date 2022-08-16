@@ -1,6 +1,6 @@
 <template>
      <div class="projects-container">
-      <Header :currPage="'projects'" :pages="['notes', 'about']"/>
+      <Header :currPage="'projects'" :pages="['about']"/>
       <Projects /> 
       <Footer />
     </div>

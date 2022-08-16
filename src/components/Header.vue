@@ -72,5 +72,23 @@ export default {
     background-color: rgba(255, 105, 180, 0.1);
 }
 
+@media screen and (max-width: 600px) {
+    .header-container {
+        height: 90px;
+    }
+
+    .home-link {
+        font-size: 0.7rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .link {
+        font-size: 0.8rem;
+    }
+}
+
 
 </style>

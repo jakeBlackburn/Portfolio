@@ -2,7 +2,9 @@
     <div class="about-me-container">
         <div class="introduction">
             <div class="text-container">
-                <img src="../assets/fire.gif" alt="fire-img" class="fire-animation">
+                <div class="fire-animation">
+                    <img src="../assets/fire.gif" alt="fire-img" class="fire">
+                </div>
                 <h2 class="text-title">About Me</h2> 
                 <p class="text">
                     My experience in programming began in a high school electronics class where I became fascinated with these incredibly useful and complex
@@ -44,10 +46,10 @@
                     </dd>
                     <dt>self-teaching:</dt>
                     <dd>
-                        Over the past year I have completed many online tutorials and hours of research and reading on my own. All my notes on projects, tutorials, and various topics can be found on the Notes page
+                        Over the past year I have completed many online tutorials and hours of research and reading on my own. 
                     </dd>
                 </dl>
-                <router-link to="/notes">View Notes Page</router-link>
+                <!-- <router-link to="/notes">View Notes Page</router-link> -->
             </div>
             <div class="projects-container">
                 <h4 class="title">Projects</h4>
@@ -90,12 +92,12 @@
     z-index: 1;
     position: absolute;
     top: 50px;
-    left: 40%;
+    width: 100%;
+    text-align: center;
 }
 
 .text {
     margin: 30px
-
 }
 
 .text-container {
@@ -109,12 +111,16 @@
 }
 
 .fire-animation {
-    width: 200px;
+    width: 100%;
     height: 150px;
     position: absolute;
-    top: 10px;
-    left: 40%;
+    top: 0px;
     z-index: 0;
+}
+
+.fire {
+    width: 150px;
+    height: 150px;
 }
 
 .headshot {
@@ -133,7 +139,7 @@
 
 .skills-container {
     width: 18%;  
-    background-color: antiquewhite;
+    background-color: rgb(215, 255, 235);
     border-radius: 8px;
     padding: 25px;
     margin: 2%;
@@ -205,6 +211,87 @@ a:hover {
     color: hotpink;
     border-radius: 3px;
     background-color: rgba(127, 255, 212, 0.2);
+}
+
+@media screen and (max-width: 1155px) {
+    .text-container {
+        width: auto;
+        margin: 0 50px;
+    }
+
+   .experience-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 3% 100px 3%;
+   }
+
+   .education-container {
+    position: static;
+    width: 70%;
+    padding: 25px 50px;
+
+   }
+
+   .skills-container {
+    position: static;
+    width: 40%;
+    padding: 25px 75px;
+   }
+
+   .projects-container {
+    width: 55%;
+    padding: 25px 50px;
+
+   }
+
+
+}
+
+@media screen and (max-width: 570px) {
+    .text-container {
+        width: 85%;
+        margin: 0;
+        padding-top: 100px;
+    }
+
+    .text-title {
+        font-size: 3rem;
+        top: 20px
+    }
+
+    .text {
+        margin: 15px;
+        font-size: 0.8rem;
+    }
+
+    .fire {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skills-container {
+        width: 35%;
+        padding: 25px 50px;
+        margin-bottom: 25px;
+    }
+
+    .education-container {
+        margin-bottom: 25px;
+        padding: 25px;
+    }
+
+    .projects-container {
+        
+        width: 70%;
+        padding: 25px;
+    }
+
+    .projects-text {
+        font-size: 0.8rem;
+    }
+
+
 }
 
 

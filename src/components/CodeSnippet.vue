@@ -29,7 +29,7 @@ export default {
 .code-snippet {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
-    padding: 10px 5px;
+    padding: 5px;
 }
 
 pre, code {
@@ -40,8 +40,10 @@ pre, code {
 }
 
 .caption {
-    color: wheat;
-    margin-left: 35px;
+    color: grey;
+    text-align: right;
+    margin-right: 35px;
+    font-size: 0.6rem;
 }
 
 

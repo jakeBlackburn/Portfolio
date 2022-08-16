@@ -7,10 +7,13 @@
             <img src="../assets/right-arrow.png" alt="right arrow" class="arrow right" @click="isLoading ? null : nextProject()">
         </div>
         <div class="text-container">
-            
-            <ul class="skills-list">
-                <li v-for="skill in skills" :key="skill">{{skill}}</li>
-            </ul>
+            <div class="skills-container">
+                <h5 class="skills-title">Skills</h5>
+                <ul class="skills-list">
+                    
+                    <li v-for="skill in skills" :key="skill">{{skill}}</li>
+                </ul>
+            </div>
             <p class="project-text">{{this.text}}</p>
             <div class="links">
                 <a class="demo" :href="this.urls[0]" v-if="this.urls[0] !== ''">View Demo</a>
@@ -151,10 +154,16 @@ export default {
         background: linear-gradient(0deg, rgb(84, 48, 127), rgb(30, 25, 40));
     }
 
+    .skills-title {
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: Teko;
+        margin: 0;
+    }
+
     .skills-list {
-        max-width: 20%;
         padding: 10px 40px;
-        background-color: lightpink;
+        background-color: aliceblue;
         color: purple;
         border-radius: 5px;
         font-size: 1.2rem;
@@ -187,7 +196,6 @@ export default {
 
     a:hover {
         color: hotpink;
-        background-color: rgba(65, 105, 225, 0.6);
     }
 
     .source {
