@@ -87,7 +87,7 @@ export default {
     }, 
     async created() {
         try {
-            const res = await axios.get('http://localhost:3000/api/v1/projects')
+            const res = await axios.get('https://jake-blackburn-portfolio.herokuapp.com/api/v1/projects')
             this.projects = res.data.projects
             this.updateProject(1)
             this.isLoading = false
