@@ -277,6 +277,10 @@ export default {
             padding: 20px 10px;
             margin: 0
         }
+
+        .skills-list {
+            font-size: 0.8rem;
+        }
     }
 
 </style>
