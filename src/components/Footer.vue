@@ -38,4 +38,14 @@ a:hover {
     text-shadow: 2px 2px hotpink;
     background-color: rgba(0, 255, 255, 0.3);
 }
+
+@media screen and (max-width: 500px) {
+    a {
+        font-size: 1rem;
+    }
+
+    .footer-container {
+        height: 200px;
+    }
+}
 </style>

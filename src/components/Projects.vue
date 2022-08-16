@@ -10,7 +10,6 @@
             <div class="skills-container">
                 <h5 class="skills-title">Skills</h5>
                 <ul class="skills-list">
-                    
                     <li v-for="skill in skills" :key="skill">{{skill}}</li>
                 </ul>
             </div>
@@ -158,14 +157,17 @@ export default {
         font-size: 1.5rem;
         text-align: center;
         font-family: Teko;
-        margin: 0;
+        margin: 0 0 0 20px;
     }
 
-    .skills-list {
-        padding: 10px 40px;
+    .skills-container {
         background-color: aliceblue;
         color: purple;
         border-radius: 5px;
+        padding: 20px 20px 20px 0;
+    }
+
+    .skills-list {
         font-size: 1.2rem;
     }
 
@@ -201,6 +203,80 @@ export default {
     .source {
         margin-top: 20px;
 
+    }
+
+    @media screen and (max-width: 900px) {
+        .img {
+            display: none;
+            position: absolute;
+        }
+
+        .title {
+            position: static;
+            background-color: rgb(30, 25, 40);
+            font-size: 4em;
+            padding-top: 30px;
+        }
+
+        .arrows {
+            top: 150px
+        }
+
+        .text-container {
+            width: 100%;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .project-text {
+            max-width: 80%;
+        }
+
+        .links {
+            margin-top: 30px;
+            flex-direction: row;
+            order: 2;
+        }
+
+        .demo {
+            margin: 0 10px 0 0;
+        }
+
+        .source {
+            margin: 0 0 0 10px;
+        }
+
+        .skills-container {
+            margin-top: 30px;
+            order: 1;
+        }
+
+        
+    }
+
+    @media screen and (max-width: 600px) {
+        .title {
+            font-size: 2.5em;
+        }
+
+        .arrows {
+            top: 130px
+        }
+
+        .arrow {
+            width: 15px;
+        }
+
+        .text-container {
+            padding: 30px 0 0 0;
+        }
+
+        .project-text {
+            font-size: 0.9rem;
+            max-width: 70%;
+            padding: 20px 10px;
+            margin: 0
+        }
     }
 
 </style>
