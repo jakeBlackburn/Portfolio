@@ -88,4 +88,32 @@ export default {
 .text {
     color: hotpink
 }
+
+
+@media screen and (max-width: 800px) {
+    .overview {
+        margin: 60px;
+        padding: 0;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .overview {
+        margin: 20px 40px;
+        font-size: 1rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    .section {
+        width: 70%;
+        margin-bottom: 30px;
+    }
+    
+}
 </style>
