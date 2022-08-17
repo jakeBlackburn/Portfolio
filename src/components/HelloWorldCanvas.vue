@@ -8,7 +8,7 @@
         <Mesh ref="earth">
             <SphereGeometry :widthSegments="40" :heightSegments="20" />
             <BasicMaterial>
-                <Texture :src="this.worldTexture" />
+                <Texture src="https://jake-blackburn-portfolio.herokuapp.com/world-texture.jpg" />
             </BasicMaterial>
         </Mesh>
     </Scene>
@@ -17,14 +17,22 @@
 
 <script>
 import { SphereGeometry, Camera, BasicMaterial, AmbientLight, Renderer, Scene, Mesh, Texture } from 'troisjs';
+import axios from 'axios'
 
 
 export default {
   components: { SphereGeometry, Camera, BasicMaterial, AmbientLight, Renderer, Scene, Mesh, Texture },
   data() {
     return {
-        worldTexture: require('../assets/world-texture.jpg'),
+
     }
+  },
+  async created() {
+
+    
+
+  
+
   },
   mounted() {
     const renderer = this.$refs.renderer;
