@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
   res.sendFile('../dist/index.html')
 })
 
+
 //routes
 app.use('/api/v1/projects', projects)
 app.use('/api/v1/notes', notes)
