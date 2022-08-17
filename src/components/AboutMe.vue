@@ -9,7 +9,7 @@
                 <p class="text">
                     My experience in programming began in a high school electronics class where I became fascinated with these incredibly useful and complex
                     machines we call computers. This drove me to learn python on my own and since then I’ve been immersed in the world of computer science. In
-                    college I began to learn web development on the side. As I was doing career research to decide on a major, I realized I wasn’t far off from getting
+                    college I began to learn web development on the side. Eventually I realized I wasn’t far off from getting
                     a web development job as a self taught engineer. This motivated me to take it seriously and devote most of my free time to learning as much as
                     I could, building projects utilizing various technologies, and becoming a more efficient and thoughtful programmer overall. I’m looking to apply
                     what I’ve learned to a job where I can learn more, talk with talented developers, and write some useful code!
@@ -37,7 +37,7 @@
                 <dl>
                     <dt>High School:</dt>
                     <dd>    
-                        In high school I took an Electronics course for 3 years in total and even became certified as a DC electronics technician (I would have gotten my AC cert. as well if not for covid). The second year of this course involved computer electronics: transistors, logic gates, memory units, ALUs, all of which we built from scratch, and I even learned a bit about CPU design. This class, while it didn’t directly translate to programming expertise, got me fascinated with the higher level design of computers and programming languages, and is the reason I remain interested in computer science to this day. 
+                        In high school I took an Electronics course for 3 years in total and even became certified as an electronics technician. The second year of this course involved computer electronics: transistors, logic gates, memory units, ALUs, all of which we built from scratch, and I even learned a bit about CPU design. This class, while it didn’t directly translate to programming expertise, got me fascinated with the higher level design of computers and programming languages, and is the reason I remain interested in computer science to this day. 
                         I also took AP CS my senior year where I learned the basics of programming and a lot of general information about how computers and the internet work. My senior year was entirely online and asynchronous, so I also improved my self-study habits and became accustomed to solving problems without supervision. 
                     </dd>
                     <dt>College (William and Mary):</dt>
@@ -46,7 +46,7 @@
                     </dd>
                     <dt>self-teaching:</dt>
                     <dd>
-                        Over the past year I have completed many online tutorials and hours of research and reading on my own. 
+                        Over the past year I have completed many online tutorials and hours of research and reading on my own. I plan to add a 'notes' page to this site, which will house all my writing about the topics I've learned, tutorials and projects I've done, and books I've read.
                     </dd>
                 </dl>
                 <!-- <router-link to="/notes">View Notes Page</router-link> -->

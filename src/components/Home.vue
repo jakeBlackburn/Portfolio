@@ -11,7 +11,7 @@
             <a href="https://github.com/jakeBlackburn" class="github link">github</a>
             <a href="mailto:jakeblackburnn@gmail.com" class="email link">email</a>
             <a href="https://www.linkedin.com/in/jake-blackburn-53a94b246/" class="linkedin link">linkedin</a>
-            <a href="http://localhost:3000/resume.pdf" class="resume" download>
+            <a href="https://jake-blackburn-portfolio.herkouapp.com/resume.pdf" class="resume" download>
                 <p>Resume</p><img class="download" src="../assets/download.png" alt="download">
             </a>
         </div>
