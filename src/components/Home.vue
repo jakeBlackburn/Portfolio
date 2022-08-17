@@ -11,6 +11,9 @@
             <a href="https://github.com/jakeBlackburn" class="github link">github</a>
             <a href="mailto:jakeblackburnn@gmail.com" class="email link">email</a>
             <a href="https://www.linkedin.com/in/jake-blackburn-53a94b246/" class="linkedin link">linkedin</a>
+            <a href="http://localhost:3000/resume.pdf" class="resume" download>
+                <p>Resume</p><img class="download" src="../assets/download.png" alt="download">
+            </a>
         </div>
     </div>
     <div class="navbar">
@@ -117,6 +120,12 @@ a:hover {
     border-radius: 3px;
 }
 
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .link {
     padding: 10px;
     text-decoration: underline;
@@ -126,6 +135,16 @@ a:hover {
     color:aqua;
 }
 
+.resume {
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+}
+
+.download {
+    margin-left: 5px;
+    width: 20px;
+}
 
 
 @media screen and (max-width: 1155px) {
