@@ -18,7 +18,7 @@
     </div>
     <div class="navbar">
         <router-link to="/projects" class="projects route">projects</router-link>
-        <!-- <router-link to="/notes" class="notes route">notes</router-link> -->
+        <router-link to="/notes" class="notes route">notes</router-link>
         <router-link to="/about" class="about route">about this website</router-link>
     </div>
 
