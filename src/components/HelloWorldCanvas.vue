@@ -8,7 +8,7 @@
         <Mesh ref="earth">
             <SphereGeometry :widthSegments="40" :heightSegments="20" />
             <BasicMaterial>
-                <Texture src="https://jake-blackburn-portfolio.herokuapp.com/world-texture.png" />
+                <Texture src="../assets/world-texture.png" />
             </BasicMaterial>
         </Mesh>
     </Scene>
