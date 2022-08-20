@@ -56,14 +56,15 @@ export default {
 
 .notes-nav {
     min-width: 18%;
-    background-color: rgb(30, 25, 40);
+    background-color: rgba(105, 90, 205, 0.2);
+    color: black;
     border-right: 1px solid black;
     padding-left: 45px;
 }
 
 .note:hover {
     cursor: pointer;
-    color:aquamarine;
+    color:slateblue;
 }
 
 .toggle-arrow {

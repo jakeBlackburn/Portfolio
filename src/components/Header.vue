@@ -30,19 +30,18 @@ export default {
     padding: 0 5%;
     background: linear-gradient(90deg, black, slateblue);
     color: wheat;
-    border-bottom: 1px solid pink;
 }
 
 .home-link {
     text-decoration: none;
-    color: aquamarine;
+    color: aqua;
     font-size: 1rem;
     padding: 10px;
     border-radius: 4px;
 }
 
 .home-link:hover {
-    color: violet;
+    color: white;
     background-color: rgba(255, 105, 180, 0.1);
     
 }
@@ -68,7 +67,7 @@ export default {
 }
 
 .link:hover {
-    color: violet;
+    color: aquamarine;
     background-color: rgba(255, 105, 180, 0.1);
 }
 
