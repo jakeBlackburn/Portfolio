@@ -8,6 +8,13 @@ const getAllProjects = asyncWrapper(async (req, res) => {
     res.status(200).json({ projects })
 })
 
+const getProject = asyncWrapper(async (req, res) => {
+    const { title: title } = req.params
+    const project = await Project.findOne({ title: title });
+    res.header("Access-Control-Allow-Origin", "http://localhost:8080");
+    res.status(200).json({ project })
+})
+
 const getNote = asyncWrapper(async (req, res) => {
     const {title: title} = req.params
     const note = await Note.findOne({ title: title })
@@ -17,5 +24,6 @@ const getNote = asyncWrapper(async (req, res) => {
 
 module.exports = {
     getAllProjects,
-    getNote
+    getNote,
+    getProject
 }

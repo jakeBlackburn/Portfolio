@@ -4,6 +4,9 @@ const ProjectSchema = new mongoose.Schema({
   title: {
     type: String,
   },
+  image: {
+    type: String,
+  },
   completed: {
     type: Boolean,
     default: false,
