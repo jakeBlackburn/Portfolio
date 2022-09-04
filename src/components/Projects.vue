@@ -1,7 +1,7 @@
 <template>
     <div class="projects-container">
         <p class="loading" v-if="this.isLoading">loading...</p>
-        <p class="projects-overview" v-if="!this.isLoading">Lorem ipsum thigng naj Lorem ipsum thigng naj Lorem ipsum thigng naj Lorem ipsum thigng naj Lorem ipsum thigng naj Lorem ipsum thigng naj Lorem ipsum thigng naj. Select a project to read its description in detail.</p>
+        <p class="projects-overview" v-if="!this.isLoading">Here are all my finished websites. These websites include varied technologies and methodologies. Select a project to read its description in detail.</p>
         <div class="grid">  
             <ProjectCard v-for="project in projects" :key="project._id" :project="project"/>
         </div>
