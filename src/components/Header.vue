@@ -3,7 +3,7 @@
     <router-link to='/' class="home-link">Back To Home</router-link>
     <div class="title">{{currPage.toUpperCase()}}</div>
     <div class="links">
-        <router-link class="link" v-for="page in pages" :key="page" :to="page">{{page}}</router-link>
+        <router-link class="link" v-for="page in pages" :key="page" :to="`/${page}`">{{page}}</router-link>
     </div>
 </div>
 </template>

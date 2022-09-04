@@ -8,7 +8,7 @@
         <Mesh ref="earth">
             <SphereGeometry :widthSegments="40" :heightSegments="20" />
             <BasicMaterial>
-                <Texture src="../assets/world-texture.png" />
+                <Texture :src="require('../assets/world-texture.png')" />
             </BasicMaterial>
         </Mesh>
     </Scene>

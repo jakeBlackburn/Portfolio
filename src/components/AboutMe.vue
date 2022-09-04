@@ -8,11 +8,10 @@
                 <h2 class="text-title">About Me</h2> 
                 <p class="text">
                     My experience in programming began in a high school electronics class where I became fascinated with these incredibly useful and complex
-                    machines we call computers. This drove me to learn python on my own and since then I’ve been immersed in the world of computer science. In
-                    college I began to learn web development on the side. Eventually I realized I wasn’t far off from getting
-                    a web development job as a self taught engineer. This motivated me to take it seriously and devote most of my free time to learning as much as
-                    I could, building projects utilizing various technologies, and becoming a more efficient and thoughtful programmer overall. I’m looking to apply
-                    what I’ve learned to a job where I can learn more, talk with talented developers, and write some useful code!
+                    machines we call computers. This drove me to learn python on my own and since then I've been immersed in the world of computer science. As I got deeper and deeper into web development I realized I wasn't far off from getting
+                    a job as a self-taught engineer. This motivated me to take it seriously and devote most of my free time to learning as much as
+                    I could, building projects utilizing various technologies, and becoming a more efficient and thoughtful programmer overall. I'm looking to apply
+                    what I've learned to a job where I can learn more, talk with talented developers, and write some useful code!
                 </p>
             </div>
 
@@ -46,16 +45,17 @@
                     </dd>
                     <dt>self-teaching:</dt>
                     <dd>
-                        Over the past year I have completed many online tutorials and hours of research and reading on my own. I plan to add a 'notes' page to this site, which will house all my writing about the topics I've learned, tutorials and projects I've done, and books I've read.
+                        Over the past year I have completed many online tutorials and hours of research and reading on my own. I plan to create a 'notes' app soon, which will house all my writing about the topics I've learned, tutorials and projects I've done, and books I've read.
                     </dd>
                 </dl>
-                <!-- <router-link to="/notes">View Notes Page</router-link> -->
             </div>
             <div class="projects-container">
                 <h4 class="title">Projects</h4>
                 <p class="projects-text">All my projects are listed below. A more comprehensive description of each project can be found on the Projects page or in the readme for each project which can be found on my github.</p>
                 <router-link to='/projects'>View Projects Page</router-link>
                 <dl>
+                    <dt>Artists Ecommerce</dt>
+                    <dd>Vue.js App with vue router and vuex state management. This is a mock e-commerce app where you can "buy" artworks from famous artists such as Da Vinci and Van Gogh. Some paintings are up for auction, and users can place bids. Fixed price paintings can be "bought" with stripe in test mode. The site retireves data of the artists and and artworks from an API served with express, and hosted on MongoDB Atlas. The Api has multiple routes for retireving all artists and artworks as well as specific artists and artworks.</dd>
                     <dt>Blue Sky</dt>
                     <dd>Basic one page app made with React, Webpack and Express made for a local restaurant in my hometown. Supports online ordering through a third party service.</dd>
                     <dt>Napa Thai</dt>
@@ -63,7 +63,7 @@
                     <dt>Pure Eats</dt>
                     <dd>Basic one page app made with Vue.js made for a local restaurant in my hometown. Supports online ordering through a third party service.</dd>
                     <dt>portfolio (this website)</dt>
-                    <dd>Vue.js application with multiple routes. Consumes an API built with express and MongoDB Atlas to get the data and text for the projects and notes page. This is my portfolio so it includes a stylish landing page with a 3D animation rendered with three.js, a projects page showing off all the websites I've built, and a notes page to catalogue and showcase what I've learned as well as to help me review and internalize my skills and knowledge</dd>
+                    <dd>Vue.js application with multiple routes. Consumes an API built with express and MongoDB Atlas to get the data and text for the projects page. This is my portfolio so it includes a stylish landing page with a 3D animation rendered with three.js and a projects page showing off all the websites I've built.</dd>
               
                 </dl>
             </div>
@@ -138,7 +138,7 @@
 }
 
 .skills-container {
-    width: 18%;  
+    width: 16%;  
     background-color: rgb(215, 255, 235);
     border-radius: 8px;
     padding: 25px;
@@ -148,7 +148,7 @@
 }
 
 .education-container {
-    width: 42%;
+    width: 36%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,7 +161,7 @@
 }
 
 .projects-container {
-    width: 28%;
+    width: 36%;
     display: flex;
     flex-direction: column;
     align-items: center;

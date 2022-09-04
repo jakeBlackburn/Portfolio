@@ -27,7 +27,6 @@ export default {
     },
     methods: {
         navigate() {
-            console.log(`/projects/${this.project.title}`)
             this.$router.push(`/projects/${this.project.title}`)
         }
     },
