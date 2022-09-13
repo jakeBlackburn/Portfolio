@@ -10,7 +10,7 @@
                 <li v-for="skill in this.project.skills" :key="skill">{{skill}}</li>
             </ul>
             <div class="links">
-                <a class="link" :href="this.project.urls[0]">view demo</a>
+                <a class="link" v-if="this.project.urls[0]" :href="this.project.urls[0]">view demo</a>
                 <a class="link" :href="this.project.urls[1]">source code</a>
             </div>
         </div>
