@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
-const projects = require('./routes/projects');
-const notes = require('./routes/notes');
+const projects = require('./router');
 const connectDB = require('./connect');
 require('dotenv').config();
 const notFound = require('./not-found');
@@ -18,7 +17,6 @@ app.get('/', (req, res) => {
 
 //routes
 app.use('/api/v1/projects', projects)
-app.use('/api/v1/notes', notes)
 
 app.use(notFound)
 

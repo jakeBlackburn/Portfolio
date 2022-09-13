@@ -1,5 +1,4 @@
-const Project = require('./models/Project')
-const Note = require('./models/Note')
+const Project = require('./models')
 const asyncWrapper = require('./async')
 
 const getAllProjects = asyncWrapper(async (req, res) => {
@@ -15,15 +14,7 @@ const getProject = asyncWrapper(async (req, res) => {
     res.status(200).json({ project })
 })
 
-const getNote = asyncWrapper(async (req, res) => {
-    const {title: title} = req.params
-    const note = await Note.findOne({ title: title })
-    res.header("Access-Control-Allow-Origin", "http://localhost:8080");
-    res.status(200).json({ note })
-})
-
 module.exports = {
     getAllProjects,
-    getNote,
     getProject
 }
