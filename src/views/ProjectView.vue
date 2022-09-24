@@ -4,9 +4,9 @@
       <img v-if="!this.isLoading" :src="require(`../assets/${this.project.image}`)">
       <div class="content">
         <p v-if="!this.isLoading" class="description">{{this.project.description}}</p>
-        <div class="project-details" v-if="!this.isLoading">
+        <div class="project-details">
             <h4>Skills:</h4>
-            <ul class="skills">
+            <ul class="skills" v-if="!this.isLoading">
                 <li v-for="skill in this.project.skills" :key="skill">{{skill}}</li>
             </ul>
             <div class="links" v-if="!this.isLoading">
@@ -35,13 +35,13 @@ export default {
       Header ,
       Footer 
     },
-    async created() {
+    async mounted() {
         const { project } = this.$route.params
         const res = await axios.get(`https://jake-blackburn-portfolio.herokuapp.com/api/v1/projects/${project}`)
-        this.project = res.data.project
+        this.project = res.data
+        console.log(this.project)
         this.title = this.project.title.replace(/-/g, " ")
         this.isLoading = false
-        console.log(this.isLoading, this.project)
     }
 }
 </script>

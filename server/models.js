@@ -17,10 +17,13 @@ const ProjectSchema = new mongoose.Schema({
   skills: {
     type: Array,
   },
-  url: {
-    type: String
+  urls: {
+    type: Array,
   }
 
+},
+{
+  versionKey: false 
 })
 
 module.exports = mongoose.model('Project', ProjectSchema)
