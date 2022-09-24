@@ -1,8 +1,50 @@
 [
-    {"title":"Napa Thai","description":"This is a simple website made for a local Thai restaurant in my hometown. It is built with angular and served with express. The website also utilizes a third party service called GloriaFood to support online orders and a few other features. The “See Menu & Order” and “Table Reservation” buttons lead to a mock restaurant with a basic menu. Everything related to the menu and more can be configured straight from the GloriaFood website, making it simple and fast to make changes to the menu, delivery options, etc.  ","skills":["Typescript","Angular","Express","HTML","SCSS"],"completed":false,"urls":["https://napa-thai-demo.herokuapp.com","https://github.com/jakeBlackburn/napa-thai-demo"]},
-    {"title":"Blue Sky","description":"This is a simple website made for a local restaurant in my hometown. It is built with React and served with express. The website also utilizes a third party service called GloriaFood to support online orders and a few other features. The “See Menu & Order” and “Table Reservation” buttons lead to a mock restaurant with a basic menu. Everything related to the menu and more can be configured straight from the GloriaFood website, making it simple and fast to make changes to the menu, delivery options, etc.  ","skills":["React","Express","HTML","CSS"],"completed":false,"urls":["https://blue-sky-demo.herokuapp.com","https://github.com/jakeBlackburn/blue-sky-demo"]},
-    {"title":"Pure Eats","description":"This is a simple website made for a local restaurant in my hometown. It is built with Vue.js. The website also utilizes a third party service called GloriaFood to support online orders and a few other features. The “See Menu & Order” and “Table Reservation” buttons lead to a mock restaurant with a basic menu. Everything related to the menu and more can be configured straight from the GloriaFood website, making it simple and fast to make changes to the menu, delivery options, etc.  ","skills":["Javascript","Vue.js","HTML","CSS"],"completed":true,"urls":["https://pure-eats-demo.herokuapp.com","https://github.com/jakeBlackburn/pure-eats-demo"]},
-    {"title":"Portfolio","description":"This website is built with vue.js and retrieves its data from a NoSql database hosted on MongoDB Atlas and served with Express. The homepage contains basic details, contact information, etc., as well as a 3D animation rendered with three.js. The projects page shows off all my projects in detail, and the notes page houses all my personal notes on each of my projects, the technologies I learn, and my overall understanding of computer science. ","skills":["Javascript","Vue.js","HTML","CSS","Express","MongoDB / NoSQL","APIs"],"completed":false,"urls":["","https://github.com/jakeBlackburn/Portfolio"]},
-    {"title":"Artists Ecommerce","description":"This website is a mock e-commerce application made with vue.js. You can \"buy\" paintings from famous artists throughout history and bid in auctions. I plan to add more functionality like user profiles soon.  ","skills":["Javascript","Vue.js","HTML","CSS","Express","MongoDB / NoSQL","APIs"],"completed":false,"urls":["https://artists-ecommerce.herokuapp.com","https://github.com/jakeBlackburn/artists-ecommerce"],"image":"project-image-5.jpeg"},
-    {"title":"Notes App","description":"This is a simple app showing off my notes on various web development topics, and attempts to explain things with no prior knowledge required. It it currently under construction, much of the notes are unfinished, but i am adding new notes daily.","skills":["typescript","Vue.js","HTML","CSS","MongoDB / NoSQL","APIs"],"completed":false,"urls":[null,"https://github.com/jakeBlackburn/notes-app"],"image":"project-image-6.png"}
+    {
+        "title":"Napa-Thai",
+        "description":"This is a simple website made for a local Thai restaurant in my hometown. It is built with angular and served with express. The website also utilizes a third party service called GloriaFood to support online orders and a few other features. The “See Menu & Order” and “Table Reservation” buttons lead to a mock restaurant with a basic menu. Everything related to the menu and more can be configured straight from the GloriaFood website, making it simple and fast to make changes to the menu, delivery options, etc.  ",
+        "skills":["Typescript","Angular","Express","HTML","SCSS"],
+        "completed":false,
+        "urls":["https://napa-thai-demo.herokuapp.com","https://github.com/jakeBlackburn/napa-thai-demo"],
+        "image":"project-image-1.webp"
+    },
+    {
+        "title":"Blue-Sky",
+        "description":"This is a simple website made for a local restaurant in my hometown. It is built with React and served with express. The website also utilizes a third party service called GloriaFood to support online orders and a few other features. The “See Menu & Order” and “Table Reservation” buttons lead to a mock restaurant with a basic menu. Everything related to the menu and more can be configured straight from the GloriaFood website, making it simple and fast to make changes to the menu, delivery options, etc.  ",
+        "skills":["React","Express","HTML","CSS"],
+        "completed":false,
+        "urls":["https://blue-sky-demo.herokuapp.com","https://github.com/jakeBlackburn/blue-sky-demo"],
+        "image":"project-image-2.png"
+    },
+    {
+        "title":"Pure-Eats",
+        "description":"This is a simple website made for a local restaurant in my hometown. It is built with Vue.js. The website also utilizes a third party service called GloriaFood to support online orders and a few other features. The “See Menu & Order” and “Table Reservation” buttons lead to a mock restaurant with a basic menu. Everything related to the menu and more can be configured straight from the GloriaFood website, making it simple and fast to make changes to the menu, delivery options, etc.  ",
+        "skills":["Javascript","Vue.js","HTML","CSS"],
+        "completed":true,
+        "urls":["https://pure-eats-demo.herokuapp.com","https://github.com/jakeBlackburn/pure-eats-demo"],
+        "image":"project-image-3.png"
+    },
+    {
+        "title":"Portfolio",
+        "description":"This website is built with vue.js and retrieves its data from a NoSql database hosted on MongoDB Atlas and served with Express. The homepage contains basic details, contact information, etc., as well as a 3D animation rendered with three.js. The projects page shows off all my projects in detail, and the notes page houses all my personal notes on each of my projects, the technologies I learn, and my overall understanding of computer science. ",
+        "skills":["Javascript","Vue.js","HTML","CSS","Express","MongoDB / NoSQL","APIs"],
+        "completed":false,
+        "urls":[null,"https://github.com/jakeBlackburn/Portfolio"],
+        "image":"project-image-4.png"
+    },
+    {
+        "title":"Artists-Ecommerce",
+        "description":"This website is a mock e-commerce application made with vue.js. You can \"buy\" paintings from famous artists throughout history and bid in auctions. I plan to add more functionality like user profiles soon.  ",
+        "skills":["Javascript","Vue.js","HTML","CSS","Express","MongoDB / NoSQL","APIs"],
+        "completed":false,
+        "urls":["https://artists-ecommerce.herokuapp.com","https://github.com/jakeBlackburn/artists-ecommerce"],
+        "image":"project-image-5.jpeg"
+    },
+    {
+        "title":"Notes-App",
+        "description":"This is a simple app showing off my notes on various web development topics, and attempts to explain things with no prior knowledge required. It it currently under construction, much of the notes are unfinished, but i am adding new notes daily.",
+        "skills":["typescript","Vue.js","HTML","CSS","MongoDB / NoSQL","APIs"],
+        "completed":false,
+        "urls":["https://jakes-notes.herokuapp.com","https://github.com/jakeBlackburn/notes-app"],
+        "image":"project-image-6.png"
+    }
 ]

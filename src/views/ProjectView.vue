@@ -1,15 +1,15 @@
 <template>
       <Header :currPage="this.title" :pages="['about', 'projects']"/>
       <p v-if="this.isLoading" class="loading">Loading...</p>
-      <img :src="require(`../assets/${this.project.image}`)">
+      <img v-if="!this.isLoading" :src="require(`../assets/${this.project.image}`)">
       <div class="content">
-        <p class="description">{{this.project.description}}</p>
-        <div class="project-details">
+        <p v-if="!this.isLoading" class="description">{{this.project.description}}</p>
+        <div class="project-details" v-if="!this.isLoading">
             <h4>Skills:</h4>
             <ul class="skills">
                 <li v-for="skill in this.project.skills" :key="skill">{{skill}}</li>
             </ul>
-            <div class="links">
+            <div class="links" v-if="!this.isLoading">
                 <a class="link" v-if="this.project.urls[0]" :href="this.project.urls[0]">view demo</a>
                 <a class="link" :href="this.project.urls[1]">source code</a>
             </div>
@@ -41,6 +41,7 @@ export default {
         this.project = res.data.project
         this.title = this.project.title.replace(/-/g, " ")
         this.isLoading = false
+        console.log(this.isLoading, this.project)
     }
 }
 </script>
