@@ -1,5 +1,4 @@
 <template>
-
   <Renderer width="550" height="500" ref="renderer" :alpha="true">
     <h3 class="hello"><em>HELLO!</em></h3>
     <Camera :position="{ z: 3 }" />
@@ -18,8 +17,8 @@
 <script>
 import { SphereGeometry, Camera, BasicMaterial, AmbientLight, Renderer, Scene, Mesh, Texture } from 'troisjs';
 
-
 export default {
+  name: 'HelloWorldCanvas',
   components: { SphereGeometry, Camera, BasicMaterial, AmbientLight, Renderer, Scene, Mesh, Texture },
   mounted() {
     const renderer = this.$refs.renderer;
@@ -37,8 +36,6 @@ export default {
 };
 </script>
 
-
-
 <style scoped>
 .hello {
     font-size: 7rem;
@@ -53,5 +50,4 @@ export default {
 Renderer {
   position: relative;
 }
-
 </style>

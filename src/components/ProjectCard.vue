@@ -1,22 +1,16 @@
 <template>
 <div class="card-container" @click="navigate()">
-<img :src="require(`../assets/${project.image}`)">
-<h3>{{project.title.replace(/-/g, " ")}}</h3>
-<div class="skills">
-    <p v-for="skill in project.skills" :key="skill">{{skill}}</p>
+    <img :src="require(`../assets/${project.image}`)">
+    <h3>{{project.title.replace(/-/g, " ")}}</h3>
+    <div class="skills">
+        <p v-for="skill in project.skills" :key="skill">{{skill}}</p>
+    </div>
 </div>
-
-    
-</div>
-
 </template>
 
-
-
 <script>
-
-
 export default {
+    name: 'Project Card',
     props: {
         project: Object
     },
@@ -30,13 +24,8 @@ export default {
             this.$router.push(`/projects/${this.project.title}`)
         }
     },
-    
 }
-
-
 </script>
-
-
 
 <style scoped>
 .card-container {

@@ -14,9 +14,7 @@
                     what I've learned to a job where I can learn more, talk with talented developers, and write some useful code!
                 </p>
             </div>
-
         </div>
-       
         <div class="experience-container">
             <div class="skills-container">
                 <h4 class="title">Skills</h4>
@@ -26,9 +24,11 @@
                     <dt>Frontend:</dt>
                     <dd>HTML, CSS, Webpack, Vue.js, React, Angular, Styled Components</dd>
                     <dt>Backend:</dt>
-                    <dd>Express, Rest API, SQL</dd>
+                    <dd>Express, Rest API, MongoDB, SQL</dd>
                     <dt>DevOps:</dt>
-                    <dd>Git, Github, Docker</dd>
+                    <dd>Git, Github</dd>
+                    <dt>other:</dt>
+                    <dd>SEO, Adobe Creative Suite</dd>
                 </dl>
             </div>
             <div class="education-container">
@@ -45,9 +45,10 @@
                     </dd>
                     <dt>self-teaching:</dt>
                     <dd>
-                        Over the past year I have completed many online tutorials and hours of research and reading on my own. I plan to create a 'notes' app soon, which will house all my writing about the topics I've learned, tutorials and projects I've done, and books I've read.
+                        Over the past year I have completed many online tutorials and hours of research and reading on my own. I've created a 'notes' app, listed in the projects, which houses writing about the topics I've learned and books I've read. In the future I plan to add more notes to this app, as well as include descriptions and commentary on the tutorials I've done and projects I've built.
                     </dd>
                 </dl>
+                <a href="https://jakes-notes.herokuapp.com" target="_blank">View Notes App</a>
             </div>
             <div class="projects-container">
                 <h4 class="title">Projects</h4>
@@ -56,6 +57,8 @@
                 <dl>
                     <dt>Artists Ecommerce</dt>
                     <dd>Vue.js App with vue router and vuex state management. This is a mock e-commerce app where you can "buy" artworks from famous artists such as Da Vinci and Van Gogh. Some paintings are up for auction, and users can place bids. Fixed price paintings can be "bought" with stripe in test mode. The site retireves data of the artists and and artworks from an API served with express, and hosted on MongoDB Atlas. The Api has multiple routes for retireving all artists and artworks as well as specific artists and artworks.</dd>
+                    <dt>Notes App</dt>
+                    <dd>This Vue.js app houses my notes on various programming topics such as javascript, HTML, CSS, and data structures and algorithms. I plan to continue adding notes to this app as I learn.</dd>
                     <dt>Blue Sky</dt>
                     <dd>Basic one page app made with React, Webpack and Express made for a local restaurant in my hometown. Supports online ordering through a third party service.</dd>
                     <dt>Napa Thai</dt>
@@ -64,11 +67,9 @@
                     <dd>Basic one page app made with Vue.js made for a local restaurant in my hometown. Supports online ordering through a third party service.</dd>
                     <dt>portfolio (this website)</dt>
                     <dd>Vue.js application with multiple routes. Consumes an API built with express and MongoDB Atlas to get the data and text for the projects page. This is my portfolio so it includes a stylish landing page with a 3D animation rendered with three.js and a projects page showing off all the websites I've built.</dd>
-              
                 </dl>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -139,7 +140,7 @@
 
 .skills-container {
     width: 16%;  
-    background-color: rgb(215, 255, 235);
+    background-color: lightcyan;
     border-radius: 8px;
     padding: 25px;
     margin: 2%;
@@ -154,10 +155,10 @@
     align-items: center;
     background-color: lightcyan;
     border-radius: 8px;
-    padding: 25px;
+    padding: 20px 25px;
     margin: 2%;
     position: sticky;
-    top: 60px
+    top: 10px
 }
 
 .projects-container {
@@ -166,7 +167,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
-    background-color: aliceblue;
+    background-color: lightcyan;
     padding: 25px;
     margin: 2%;
 }
@@ -184,6 +185,10 @@
     margin: 0;
     font-family: Teko;
 }   
+
+dl {
+    margin: 0;
+}
 
 dt {
     color: slateblue;
@@ -230,7 +235,6 @@ a:hover {
     position: static;
     width: 70%;
     padding: 25px 50px;
-
    }
 
    .skills-container {
@@ -271,9 +275,10 @@ a:hover {
     }
 
     .skills-container {
-        width: 35%;
-        padding: 25px 50px;
+        width: 70%;
+        padding: 25px;
         margin-bottom: 25px;
+        text-align: center;
     }
 
     .education-container {
@@ -282,7 +287,6 @@ a:hover {
     }
 
     .projects-container {
-        
         width: 70%;
         padding: 25px;
     }
@@ -293,6 +297,4 @@ a:hover {
 
 
 }
-
-
 </style>

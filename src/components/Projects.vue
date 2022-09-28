@@ -1,7 +1,6 @@
 <template>
     <div class="projects-container">
         <p class="loading" v-if="this.isLoading">loading...</p>
-        <p class="projects-overview" v-if="!this.isLoading">Here are all my finished websites. These websites include varied technologies and methodologies. Select a project to read its description in detail.</p>
         <div class="grid">  
             <ProjectCard v-for="project in projects" :key="project._id" :project="project"/>
         </div>
@@ -13,7 +12,7 @@ import ProjectCard from './ProjectCard.vue'
 import axios from 'axios'
 
 export default {
-    name: 'projects',
+    name: 'Projects',
     components: {
         ProjectCard
     },
@@ -23,7 +22,7 @@ export default {
             isLoading: true,            
         }
     },
-    async mounted() {
+    async created() {
         try {
             const res = await axios.get('https://jake-blackburn-portfolio.herokuapp.com/api/v1/projects')
             this.projects = res.data.projects
@@ -31,13 +30,11 @@ export default {
         } catch (err) {
             console.log(err);
         }
-    
     }
 }
 </script>
 
 <style scoped>
-
     .loading {
         width: 100%;
         font-size: 3rem;    
@@ -50,22 +47,11 @@ export default {
         background-color: black;
     }
 
-    
-
-    .projects-overview {
-        margin: 50px 10% 75px 10%;
-        color: aliceblue;
-        text-shadow: 1px 1px deeppink;
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
     .grid {
         padding: 30px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 30px;
-        margin: 0 10px 100px 10px;
+        margin: 50px 10px;
     }
-
 </style>

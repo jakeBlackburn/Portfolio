@@ -18,18 +18,16 @@
     </div>
     <div class="navbar">
         <router-link to="/projects" class="projects route">projects</router-link>
-        <!-- <router-link to="/notes" class="notes route">notes</router-link> -->
         <router-link to="/about" class="about route">about this website</router-link>
     </div>
 
 </div>
-
 </template>
-
 
 <script>
     import HelloWorldCanvas from './HelloWorldCanvas'
     export default {
+        name: 'Home',
         components: {
             HelloWorldCanvas
         },
@@ -47,14 +45,11 @@
             }, 1800)
         }
     }
-
 </script>
 
 
 
 <style scoped>
-
-
 .name-card {
     height: 300px;
     display: flex;
@@ -166,5 +161,4 @@ a:hover {
     margin-top: 50px;
   }
 }
-
 </style>

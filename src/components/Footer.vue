@@ -8,7 +8,6 @@
     </footer>
 </template>
 
-
 <style scoped>
 .footer-container {
     height: 300px;

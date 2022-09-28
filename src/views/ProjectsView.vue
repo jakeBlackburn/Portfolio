@@ -1,9 +1,9 @@
 <template>
-     <div class="projects-container">
-      <Header :currPage="'projects'" :pages="['about']"/>
-      <Projects /> 
-      <Footer />
-    </div>
+  <div class="projects-container">
+    <Header :currPage="'projects'" :pages="['about']"/>
+    <Projects /> 
+    <Footer />
+  </div>
 </template>
 
 <script>
@@ -19,5 +19,4 @@ export default {
     Footer
   },
 }
-
 </script>

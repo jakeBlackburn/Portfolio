@@ -9,19 +9,16 @@
 </template>
 
 <script>
-
-
 export default {
     name: "Header",
     props: {
         currPage: String,
         pages: Array
-    },
+    }
 }
 </script>
 
 <style scoped>
-
 .header-container {
     height: 120px;
     display: flex;
@@ -30,7 +27,6 @@ export default {
     padding: 0 5%;
     background: linear-gradient(90deg, black, slateblue);
     color: wheat;
-    border-bottom: 1px solid pink;
 }
 
 .home-link {
@@ -89,6 +85,4 @@ export default {
         font-size: 0.8rem;
     }
 }
-
-
 </style>

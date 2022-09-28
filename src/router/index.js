@@ -1,7 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProjectsView from '../views/ProjectsView.vue'
-import NotesView from '../views/NotesView.vue'
 import ProjectView from '../views/ProjectView.vue'
 
 

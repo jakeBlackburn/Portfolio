@@ -6,14 +6,12 @@
 </template>
 
 <script>
-import HelloWorldCanvas from '../components/HelloWorldCanvas.vue'
 import Home from '../components/Home.vue'
 import AboutMe from '../components/AboutMe.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorldCanvas,
     Home,
     AboutMe,
   }
@@ -24,11 +22,5 @@ export default {
 .home-container {
   display: flex;
   flex-direction: column;
-}
-
-a {
-  padding: 20px;
-  background-color:black;
-  color: wheat;
 }
 </style>
