@@ -28,43 +28,48 @@
 .overview {
     text-align: center;
     margin: 100px;
-    color: wheat;
-    text-shadow: 1px 1px purple;
+    color: slateblue;
     font-family: Teko;
     font-size: 1.5rem;
     padding: 0 10%;
 }
 
 .about-container {
-    background: linear-gradient(0deg, rgb(84, 48, 127), rgb(30, 25, 40));
+    background: linear-gradient(0deg, rgb(84, 48, 127), black);
+    padding: 0 15% 200px 15%;
     display: flex;
-    justify-content: space-around;
-    padding-bottom: 200px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .section {
-    width: 30%;
+    width: 80%;
     padding: 30px;
-    background-color: lightcyan;
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
+}
+
+.frontend {
+    margin-bottom: 50px;
 }
 
 .title {
     text-align: center;
     font-family: Teko;
     color: slateblue;
-    margin: 15px;
+    margin: 15px 0;
     font-size: 2rem;
+    width: 100%;
 }
 
 .subtitle {
-    margin: 0 0 0 50px;
+    margin: 0 0 0 100px;
     color: darkorchid;
     font-size: 1.2rem;
 }
 
 .text {
-    color: hotpink
+    color: hotpink;
 }
 
 
@@ -78,7 +83,7 @@
 
 @media screen and (max-width: 550px) {
     .overview {
-        margin: 20px 40px;
+        margin: 20px 0;
         font-size: 1rem;
     }
 
@@ -89,8 +94,17 @@
     }
 
     .section {
-        width: 70%;
+        width: 85%;
         margin-bottom: 30px;
+    }
+
+    .text {
+        font-size: 0.8rem;
+    }
+
+    .subtitle {
+        text-align: center;
+        margin: 0;
     }
     
 }

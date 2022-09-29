@@ -1,12 +1,12 @@
 <template>
     <div class="project-container">
-        <p v-if="this.isLoading" class="loading">Loading...</p>
-      <img v-if="!this.isLoading" :src="require(`../assets/${this.project.image}`)">
-      <div class="content">
+    <p v-if="this.isLoading" class="loading">Loading...</p>
+    <img v-if="!this.isLoading" :src="require(`../assets/${this.project.image}`)">
+    <div class="content">
         <p v-if="!this.isLoading" class="description">{{this.project.description}}</p>
         <div class="project-details">
             <div class="skills">
-                <h4>Skills:</h4>
+                <h4 v-if="!this.isLoading">Skills</h4>
                 <ul class="skills" v-if="!this.isLoading">
                     <li v-for="skill in this.project.skills" :key="skill">{{skill}}</li>
                 </ul>
@@ -16,7 +16,7 @@
                 <a class="link" :href="this.project.urls[1]">source code</a>
             </div>
         </div>
-      </div>
+    </div>
     </div>
 </template>
 
@@ -44,6 +44,15 @@ export default {
 </script>
 
 <style scoped>
+    .project-container {
+        background: linear-gradient(0deg, rgb(84, 48, 127), rgba(0, 0, 0, 0.3), black);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 800px;
+        padding-bottom: 100px;
+    }
+
     .loading {
         width: 100%;
         font-size: 3rem;    
@@ -53,46 +62,49 @@ export default {
 
     img {
         width: 100%;
-        height: 800px;
+        height: 900px;
         object-fit: cover;
-        opacity: 0.4;
+        opacity: 1;
+        z-index: -1;
         display: block;
+        position: absolute;
     }
 
     .content {
         position: absolute;
-        top: 200px;
-        color: aliceblue;
+        top: 150px;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 8px;
+        width: 60%;
     }
 
     .description {
-        width: 54%;
-        margin: 0 20% 80px 20%;
-        padding: 20px 3%;
         text-align: center;
         font-size: 1.5rem;
-        background-color: rgba(0, 0, 0, 0.7);
-        border-radius: 8px;
+        padding: 10px 0;
+        margin: 25px 5% 10px 5%;
+        color: darkorchid;
+        border-bottom: 1px solid darkorchid;
     }
 
     .project-details {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin: 0 25%;
-        padding: 20px 3%;
-        width: 44%;
-        border-radius: 8px;
-        background-color: rgba(0, 0, 0, 0.7);
+        margin: 10px 5% 25px 5%;
     }
 
     h4 {
         font-size: 2rem;
+        text-align: center;
         margin: 10px 0 0 0;
+        color: slateblue;
+        font-family: Teko;
     } 
 
     ul {
         font-size: 1.3rem;
+        color: hotpink;
     }
 
 
@@ -104,9 +116,10 @@ export default {
     }
 
     .link {
+        text-align: center;
         text-shadow: none;
         text-decoration: none;
-        color: aliceblue;
+        color: wheat;
         padding: 10px;
         margin: 10px;
         border-radius: 3px;
@@ -116,5 +129,66 @@ export default {
     .link:hover {
         color: white;
         background-color: rgba(255, 105, 180, 0.624);
+    }
+
+    @media screen and (max-width: 800px) {
+
+        .description {
+            font-size: 1rem;
+            margin: 25px 10% 10px 10%;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        ul {
+            font-size: 1rem;
+        }
+
+        .link {
+            font-size: 0.8rem;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .project-container {
+            height: 500px;
+        }
+
+        img {
+            height: 600px;
+        }
+
+
+        .description {
+            font-size: 0.7rem;
+            margin: 25px 10% 10px 10%;
+        }
+
+        .content {
+            top: 80px;
+        }
+
+        .project-details {
+            flex-direction: column;
+        }
+
+        h4 {
+            font-size: 1rem;
+        }
+
+        ul {
+            font-size: 0.7rem;
+            padding: 0
+        }
+
+        .link {
+            font-size: 0.6rem;
+        }
+
+        .links {
+            flex-direction: row;
+        }
     }
 </style>

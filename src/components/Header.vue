@@ -25,11 +25,12 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    background: linear-gradient(90deg, black, slateblue);
+    background: linear-gradient(0deg, black, slateblue);
     color: wheat;
 }
 
 .home-link {
+    text-align: center;
     text-decoration: none;
     color: aquamarine;
     font-size: 1rem;
@@ -44,7 +45,8 @@ export default {
 }
 
 .title {
-    font-size: 4rem;
+    text-align: center;
+    font-size: 3rem;
     letter-spacing: 5px;
     font-family: Teko;
 }
@@ -52,6 +54,7 @@ export default {
 .links {
     display: flex;
     justify-content: space-evenly;
+    margin-left: 10px;
 }
 
 .link {
@@ -59,7 +62,6 @@ export default {
     border-radius: 3px;
     text-decoration: none;
     color: honeydew;
-    margin: 10px;
     font-size: 1.1rem;
 }
 
@@ -68,7 +70,7 @@ export default {
     background-color: rgba(255, 105, 180, 0.1);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
     .header-container {
         height: 90px;
     }
@@ -82,7 +84,25 @@ export default {
     }
 
     .link {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
+}
+
+@media screen and (max-width: 400px) { 
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+
+    .link {
+        margin: 5px 0;
+    }
+    
 }
 </style>

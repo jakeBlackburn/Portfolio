@@ -46,5 +46,13 @@
         "completed":false,
         "urls":["https://jakes-notes.herokuapp.com","https://github.com/jakeBlackburn/notes-app"],
         "image":"project-image-6.png"
+    },
+    {
+        "title":"Image-Filters",
+        "description":"this is a simple python project for manipulating images a number of ways utilising python's Pillow module. Unlike other projects, this is not a website. . . yet. ",
+        "skills":["Python", "Data Structures & Algorithms"],
+        "completed":false,
+        "urls":[null,"https://github.com/jakeBlackburn/image-filters"],
+        "image":"project-image-7.png"
     }
 ]

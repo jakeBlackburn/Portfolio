@@ -32,6 +32,7 @@ export default {
     cursor: pointer;
     border: 1px solid rebeccapurple;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 img {
@@ -58,5 +59,16 @@ h3 {
     justify-content: space-around;
     border-top: 1px solid rebeccapurple;
     color: whitesmoke;
+    font-size: 0.75rem;
+}
+
+@media screen and (max-width: 500px) {
+    .skills {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    
 }
 </style>

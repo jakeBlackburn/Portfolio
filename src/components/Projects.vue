@@ -44,7 +44,8 @@ export default {
 
 
     .projects-container {
-        background-color: black;
+        background: linear-gradient(0deg, rgb(84, 48, 127) 0 5%, black 15% 100%);
+        padding-bottom: 100px;
     }
 
     .grid {
@@ -52,6 +53,12 @@ export default {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 30px;
-        margin: 50px 10px;
+        margin: 50px 10px 0 10px;
+    }
+
+    @media screen and (max-width: 850px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
     }
 </style>
