@@ -54,5 +54,13 @@
         "completed":false,
         "urls":[null,"https://github.com/jakeBlackburn/image-filters"],
         "image":"project-image-7.png"
+    },
+    {
+        "title":"Code-Examples",
+        "description":"this is a repo full of code examples for various topics. It is the companion repo for the Notes App. It is a work in progress; I plan to add more examples and commentary for more topics as time goes on.",
+        "skills":["Javascript", "Data Structures & Algorithms, HTML, CSS, SQL"],
+        "completed":false,
+        "urls":[null,"https://github.com/jakeBlackburn/code-examples"],
+        "image":"project-image-8.png"
     }
 ]
