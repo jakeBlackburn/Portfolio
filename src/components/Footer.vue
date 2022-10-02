@@ -1,7 +1,7 @@
 <template>
     <footer class="footer-container">
         <div class="links">
-            <a href="https://github.com/jakeBlackburn">gihub</a>
+            <a href="https://github.com/jakeBlackburn">github</a>
             <a href="mailto:jakeblackburnn@gmail.com">email</a>
         </div>
     </footer>
